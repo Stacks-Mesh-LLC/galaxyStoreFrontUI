@@ -1,0 +1,22 @@
+# Ignore node_modules and non-public files from Worker Static Assets upload
+node_modules/
+node_modules/**
+.git/
+.git/**
+.github/
+.github/**
+.wrangler/
+.wrangler/**
+scripts/
+scripts/**
+content/
+content/**
+worker.js
+wrangler.jsonc
+wrangler.json
+package.json
+package-lock.json
+bun.lock
+bun.lockb
+README.md
+*.log

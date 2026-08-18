@@ -18,9 +18,5 @@
     "ecommerce"
   ],
   "author": "Galaxy Medical Alert Systems",
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "serve": "^14.2.4",
-    "wrangler": "^3.114.17"
-  }
+  "license": "UNLICENSED"
 }
