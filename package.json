@@ -2,19 +2,19 @@
   "name": "galaxy-medical-alert-storefront",
   "version": "1.0.0",
   "description": "Galaxy Medical Alert Systems - Modern Storefront and Product Catalog",
-  "main": "index.html",
+  "main": "worker.js",
   "scripts": {
     "dev": "npx serve . -l 3000",
     "start": "npx serve . -l 3000",
     "preview": "npx serve . -l 3000",
     "verify": "node scripts/verify.js",
     "build": "node scripts/verify.js",
-    "deploy": "npx wrangler pages deploy ."
+    "deploy": "npx wrangler deploy"
   },
   "keywords": [
     "medical-alert",
     "storefront",
-    "cloudflare-pages",
+    "cloudflare-workers",
     "ecommerce"
   ],
   "author": "Galaxy Medical Alert Systems",
