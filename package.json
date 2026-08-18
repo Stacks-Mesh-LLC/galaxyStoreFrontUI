@@ -9,19 +9,18 @@
     "preview": "npx serve . -l 3000",
     "verify": "node scripts/verify.js",
     "build": "node scripts/verify.js",
-    "deploy": "npx wrangler pages deploy . --project-name=galaxy-storefront"
+    "deploy": "npx wrangler pages deploy ."
   },
   "keywords": [
     "medical-alert",
     "storefront",
     "cloudflare-pages",
-    "cloudflare-workers",
     "ecommerce"
   ],
   "author": "Galaxy Medical Alert Systems",
   "license": "UNLICENSED",
   "devDependencies": {
     "serve": "^14.2.4",
-    "wrangler": "^3.109.0"
+    "wrangler": "^3.114.17"
   }
 }
