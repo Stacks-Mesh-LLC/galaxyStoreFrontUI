@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./assets/js/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#F7FAFB; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  @keyframes gx-pop{ 0%{ transform:translateY(14px) scale(.96); opacity:0; } 100%{ transform:translateY(0) scale(1); opacity:1; } }
+  @keyframes gx-dot{ 0%,60%,100%{ transform:translateY(0); opacity:.4; } 30%{ transform:translateY(-4px); opacity:1; } }
+  .gx-scroll::-webkit-scrollbar{ width:6px; }
+  .gx-scroll::-webkit-scrollbar-thumb{ background:#CBDDE2; border-radius:3px; }
+</style>
+</helmet>
+
+<!-- LAUNCHER -->
+<sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}">
+<button onClick="{{ toggle }}" aria-label="Open support chat" style="position:fixed; bottom:26px; right:26px; z-index:9999; display:flex; align-items:center; gap:11px; background:#2E9CB0; color:#fff; border:none; cursor:pointer; font-family:inherit; font-size:16px; font-weight:700; padding:15px 22px 15px 18px; border-radius:999px; box-shadow:0 16px 38px -10px rgba(46,156,176,.7);">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 9h8M8 13h5"></path></svg>
+  Chat with us
+</button>
+</sc-if>
+
+<!-- PANEL -->
+<sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed; bottom:26px; right:26px; z-index:9999; width:390px; max-width:calc(100vw - 32px); height:600px; max-height:calc(100vh - 52px); display:flex; flex-direction:column; background:#fff; border:1px solid #E5EEF0; border-radius:22px; overflow:hidden; box-shadow:0 30px 70px -18px rgba(15,46,51,.5); animation:gx-pop .22s ease;">
+
+  <!-- header -->
+  <div style="flex:none; display:flex; align-items:center; gap:13px; padding:18px 20px; background:linear-gradient(135deg,#2E9CB0 0%,#1F7E96 100%);">
+    <span style="flex:none; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,.18); display:flex; align-items:center; justify-content:center;">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><circle cx="11" cy="20" r="5.5" fill="#fff"></circle><path d="M19 11.5a12 12 0 0 1 0 17" stroke="#fff" stroke-width="3.2" stroke-linecap="round"></path><path d="M24.5 6a19.5 19.5 0 0 1 0 28" stroke="#BEE6EE" stroke-width="3.2" stroke-linecap="round"></path></svg>
+    </span>
+    <div style="flex:1; line-height:1.2;">
+      <div style="font-size:16.5px; font-weight:800; color:#fff;">Galaxy Support</div>
+      <div style="display:flex; align-items:center; gap:7px; margin-top:3px;"><span style="width:8px; height:8px; border-radius:50%; background:#8AE6A8;"></span><span style="font-size:12.5px; font-weight:600; color:#DCF0F4;">AI assistant · replies instantly</span></div>
+    </div>
+    <button onClick="{{ toggle }}" aria-label="Close chat" style="flex:none; width:34px; height:34px; border-radius:50%; border:none; cursor:pointer; background:rgba(255,255,255,.16); display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
+  </div>
+
+  <!-- messages -->
+  <div class="gx-scroll" ref="{{ scrollRef }}" style="flex:1; overflow-y:auto; padding:22px 20px; display:flex; flex-direction:column; gap:14px; background:#F7FAFB;">
+    <sc-for list="{{ messages }}" as="m" hint-placeholder-count="2">
+      <div style="{{ m.rowStyle }}">
+        <div style="{{ m.bubbleStyle }}">{{ m.text }}</div>
+      </div>
+    </sc-for>
+
+    <sc-if value="{{ thinking }}" hint-placeholder-val="{{ false }}">
+      <div style="align-self:flex-start; display:flex; gap:4px; background:#fff; border:1px solid #E5EEF0; border-radius:16px 16px 16px 4px; padding:14px 16px;">
+        <span style="width:7px; height:7px; border-radius:50%; background:#2E9CB0; animation:gx-dot 1.2s infinite;"></span>
+        <span style="width:7px; height:7px; border-radius:50%; background:#2E9CB0; animation:gx-dot 1.2s infinite .2s;"></span>
+        <span style="width:7px; height:7px; border-radius:50%; background:#2E9CB0; animation:gx-dot 1.2s infinite .4s;"></span>
+      </div>
+    </sc-if>
+
+    <!-- quick replies -->
+    <sc-if value="{{ showQuick }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:4px;">
+        <sc-for list="{{ quickReplies }}" as="q" hint-placeholder-count="4">
+          <button onClick="{{ q.onClick }}" style="background:#fff; border:1.5px solid #CBDDE2; color:#15768F; font-family:inherit; font-size:13.5px; font-weight:700; padding:9px 14px; border-radius:999px; cursor:pointer;">{{ q.label }}</button>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- input -->
+  <div style="flex:none; border-top:1px solid #EEF3F4; padding:14px 16px; background:#fff;">
+    <form onSubmit="{{ send }}" style="display:flex; align-items:center; gap:10px; background:#F4F9FB; border:1.5px solid #E0EAED; border-radius:999px; padding:6px 6px 6px 18px;">
+      <input value="{{ draft }}" onInput="{{ onInput }}" placeholder="Ask a question…" style="flex:1; border:none; outline:none; background:transparent; font-family:inherit; font-size:15px; font-weight:500; color:#0F2E33; padding:9px 0;">
+      <button type="submit" aria-label="Send" style="flex:none; width:42px; height:42px; border-radius:50%; border:none; cursor:pointer; background:#2E9CB0; display:flex; align-items:center; justify-content:center;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"></path></svg></button>
+    </form>
+    <div style="margin-top:9px; text-align:center; font-size:11.5px; font-weight:500; color:#9AA9AC;">For emergencies call 911 · To order call <a href="tel:18559057414" style="color:#2E9CB0; font-weight:700; text-decoration:none;">1-855-905-7414</a></div>
+  </div>
+
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    open: false,
+    draft: '',
+    thinking: false,
+    messages: [
+      { role: 'assistant', text: "Hi! I'm the Galaxy Support Assistant. I can help with products, pricing, fall detection, shipping, or how to order. What can I help you with?" },
+    ],
+  };
+
+  scrollRef = (el) => { this._scroll = el; };
+  scrollDown() { requestAnimationFrame(() => { if (this._scroll) this._scroll.scrollTop = this._scroll.scrollHeight; }); }
+
+  toggle = () => this.setState((s) => ({ open: !s.open }));
+  onInput = (e) => this.setState({ draft: e.target.value });
+
+  send = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    const text = (this.state.draft || '').trim();
+    if (!text || this.state.thinking) return;
+    this.ask(text);
+  };
+
+  ask(text) {
+    const msgs = [...this.state.messages, { role: 'user', text }];
+    this.setState({ messages: msgs, draft: '', thinking: true });
+    this.scrollDown();
+
+    const system = "You are the Galaxy Medical Alert Systems support assistant for a Canadian company. Be warm, concise (2-4 sentences), and reassuring — most visitors are adult children buying for an aging parent. Products: At-Home Cellular System (from $34.95/mo; add Fall Detection for $44.95/mo), On-the-Go GPS systems incl. Slimline Watch, Watch, and Mobile pendant with GPS/Fall Detection/Wi-Fi Calling (from $49.95/mo), and voice-activated Alert Kits (Essential $39.95, Essential Plus $54.95, Premier $69.95/mo). All plans: free equipment, free shipping, free lock box, no contract, CSAA Five Diamond certified 24/7 monitoring, 200+ languages, annual plans get 2 months free. To order: online or 1-855-905-7414. For any real emergency tell them to call 911. If unsure or asked about a personal account/order, direct them to call 1-855-905-7414. Never give medical advice.";
+
+    const convo = msgs.map((m) => ({ role: m.role === 'user' ? 'user' : 'assistant', content: m.text }));
+
+    window.claude.complete({ system, max_tokens: 400, messages: convo })
+      .then((reply) => {
+        this.setState((s) => ({ messages: [...s.messages, { role: 'assistant', text: (reply || '').trim() || "Sorry, I didn't catch that — could you rephrase? For help now, call 1-855-905-7414." }], thinking: false }));
+        this.scrollDown();
+      })
+      .catch(() => {
+        this.setState((s) => ({ messages: [...s.messages, { role: 'assistant', text: "I'm having trouble connecting right now. Please call us at 1-855-905-7414 and we'll be glad to help." }], thinking: false }));
+        this.scrollDown();
+      });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const rowUser = { display:'flex', justifyContent:'flex-end' };
+    const rowBot = { display:'flex', justifyContent:'flex-start' };
+    const bubbleUser = { maxWidth:'80%', background:'#2E9CB0', color:'#fff', fontSize:'14.5px', lineHeight:'1.5', fontWeight:'500', padding:'11px 15px', borderRadius:'16px 16px 4px 16px', whiteSpace:'pre-wrap' };
+    const bubbleBot = { maxWidth:'82%', background:'#fff', color:'#23363A', fontSize:'14.5px', lineHeight:'1.5', fontWeight:'500', padding:'11px 15px', borderRadius:'16px 16px 16px 4px', border:'1px solid #E5EEF0', whiteSpace:'pre-wrap' };
+
+    const messages = s.messages.map((m) => ({
+      text: m.text,
+      rowStyle: m.role === 'user' ? rowUser : rowBot,
+      bubbleStyle: m.role === 'user' ? bubbleUser : bubbleBot,
+    }));
+
+    const quicks = ['Which system is right for my parent?', 'How does fall detection work?', 'What does it cost?', 'How do I order?'];
+    const quickReplies = quicks.map((label) => ({ label, onClick: () => this.ask(label) }));
+
+    return {
+      open: s.open,
+      closed: !s.open,
+      draft: s.draft,
+      thinking: s.thinking,
+      messages,
+      quickReplies,
+      showQuick: s.messages.length <= 1 && !s.thinking,
+      scrollRef: this.scrollRef,
+      toggle: this.toggle,
+      onInput: this.onInput,
+      send: this.send,
+    };
+  }
+}
+</script>
+</body>
+</html>

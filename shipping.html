@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./assets/js/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#fff; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:#2E9CB0; }
+  a:hover{ color:#1F7E96; }
+
+  .shop-dd{ position:relative; display:inline-flex; align-items:center; }
+  .shop-menu{ position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:16px; opacity:0; visibility:hidden; transition:opacity .15s ease; z-index:60; }
+  .shop-dd:hover .shop-menu{ opacity:1; visibility:visible; }
+  .shop-chev{ transition:transform .2s ease; }
+  .shop-dd:hover .shop-chev{ transform:rotate(180deg); }
+  .shop-item:hover{ background:#F4F9FB; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; width:100%; background:#fff;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(10px); border-bottom:1px solid #E8EFF1;">
+    <div style="max-width:1320px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px;">
+      <a href="./index.html" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:48px; width:auto; display:block;">
+      </a>
+      <nav style="display:flex; align-items:center; gap:38px;">
+        <a href="./index.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Home</a>
+        <a href="./about.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">About</a>
+        <div class="shop-dd">
+          <a href="./in-the-home.html" style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Shop
+            <svg class="shop-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="shop-menu">
+            <div style="min-width:270px; background:#fff; border:1px solid #E8EFF1; border-radius:16px; box-shadow:0 24px 50px -20px rgba(15,46,51,.35); padding:10px; display:flex; flex-direction:column;">
+              <a href="./in-the-home.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">At-Home System</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">In-home base unit</span></span>
+              </a>
+              <a href="./on-the-go.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0"></path><circle cx="12" cy="19" r="1.3" fill="#2E9CB0" stroke="none"></circle></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">On-the-Go GPS</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Mobile watch &amp; pendant</span></span>
+              </a>
+              <a href="./alert-kits.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">Alert Kits</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Essential, Plus &amp; Premier</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="./contact.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Contact</a>
+      </nav>
+      <a href="./index.html" style="display:flex; align-items:center; gap:9px; background:#2E9CB0; color:#fff; font-size:15.5px; font-weight:700; padding:13px 22px; border-radius:999px; text-decoration:none; box-shadow:0 6px 16px rgba(46,156,176,.28);">
+        Get Started Now
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section style="background:linear-gradient(180deg,#F1F8FB 0%,#FFFFFF 100%);">
+    <div style="max-width:900px; margin:0 auto; padding:72px 40px 44px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#2E9CB0;">Policies &amp; Procedures</div>
+      <h1 style="margin:16px 0 0; font-size:46px; line-height:1.1; font-weight:800; letter-spacing:-.022em; color:#0F2E33; text-wrap:pretty;">Shipping &amp; Returns Policy</h1>
+      <p style="margin:18px 0 0; max-width:640px; font-size:18px; line-height:1.6; font-weight:500; color:#5A6B6F;">Galaxy Medical Alert Systems Ltd.'s Shipping and Return Policies for Medical Alert Systems, and Title to the System &amp; Obligation to Return the System.</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <article style="max-width:900px; margin:0 auto; padding:20px 40px 40px;">
+
+    <h2 style="margin:0 0 14px; font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-.015em; color:#0F2E33;">Shipping Policy</h2>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Galaxy Medical Alert Systems Ltd. will ship all medical alert systems and/or components free of charge, through a carrier of its choice, to customers located in Canada. All products will be shipped during regular business hours, which are Monday through Friday from 9:00 a.m. to 5:00 p.m. EST. Orders received before 3 p.m. will be shipped out the same day. Galaxy Medical Alert Systems Ltd. will not be responsible for any delays in delivery by third party delivery services.</p>
+
+    <div style="border-top:1px solid #EDF3F4; margin-bottom:34px;"></div>
+
+    <h2 style="margin:0 0 14px; font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-.015em; color:#0F2E33;">Return Policy</h2>
+    <p style="margin:0 0 16px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">If you wish to cancel or return any medical alert system equipment, you must do so by first contacting one of our customer care representatives to obtain a return authorization number. Galaxy Medical Alert Systems Ltd. customer care representatives can be reached toll free at 1-866-945-5027 during regular business hours: Monday through Friday between the hours of 9:00 a.m. and 5:00 p.m. EST.</p>
+    <p style="margin:0 0 24px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">All products being returned must be sent back in good working order and in their original packaging with the return authorization number clearly marked. Any returning products received by Galaxy Medical Alert Systems Ltd. that appear to be damaged will either be immediately refused and sent back to the client or the returned equipment will be tested and if found to be damaged, a charge will be applied to the customer's account at the present replacement or repair cost determined by Galaxy Medical Alert Systems Ltd.</p>
+    <div style="margin:0 0 34px; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:16px; padding:24px 28px;">
+      <p style="margin:0 0 6px; font-size:15px; font-weight:800; color:#0F2E33;">Please return all equipment to the appropriate address below:</p>
+      <p style="margin:0; font-size:16px; line-height:1.6; font-weight:500; color:#5A6B6F;">361 Joffre Place<br>Windsor, ON N8X 2T1<br>Canada</p>
+    </div>
+
+    <div style="border-top:1px solid #EDF3F4; margin-bottom:34px;"></div>
+
+    <h2 style="margin:0 0 14px; font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-.015em; color:#0F2E33; text-wrap:pretty;">Title to the System; Obligation to Return the System</h2>
+    <p style="margin:0 0 20px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Title to the System shall remain at all times to Galaxy Medical Alert Systems Ltd. Immediately following the Services Termination Date, you shall return the System to Galaxy Medical Alert Systems Ltd. undamaged and in good operating condition.</p>
+    <div style="margin:0 0 28px; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:16px; padding:24px 28px;">
+      <p style="margin:0; font-size:16px; line-height:1.6; font-weight:500; color:#5A6B6F;">361 Joffre Place<br>Windsor, ON N8X 2T1<br>Canada</p>
+    </div>
+    <p style="margin:0 0 16px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">If:</p>
+    <ul style="margin:0 0 24px; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px;">
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(a)</span><span>you do not return the System in accordance with this Agreement or</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(b)</span><span>the System is damaged or not in good operating condition, you shall pay Galaxy Medical Alert Systems Ltd. for the System at Galaxy Medical Alert Systems Ltd.'s then-existing published rates as the agreed upon cost of replacing the System.</span></li>
+    </ul>
+    <p style="margin:0 0 24px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">You alone bear the risk of loss if the System is destroyed, damaged, or not delivered to Galaxy Medical Alert Systems Ltd. Accordingly, you must, at your sole cost and expense:</p>
+    <ul style="margin:0 0 20px; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px;">
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(1)</span><span>Ship the System to Galaxy Medical Alert Systems Ltd. in its original packaging;</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(2)</span><span>Use a carrier that provides tracking information for delivery of the System; and</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(3)</span><span>Comply with Galaxy Medical Alert Systems Ltd.'s other reasonable requirements respecting the return of the System.</span></li>
+    </ul>
+
+  </article>
+
+  <!-- HELP / CALL CTA -->
+  <section style="background:linear-gradient(180deg,#FFFFFF 0%,#F1F8FB 100%);">
+    <div style="max-width:900px; margin:0 auto; padding:20px 40px 80px;">
+      <div style="background:#0F2E33; border-radius:22px; padding:44px 40px; text-align:center;">
+        <h2 style="margin:0; font-size:28px; line-height:1.2; font-weight:800; letter-spacing:-.015em; color:#fff;">Have questions or need more help?</h2>
+        <p style="margin:14px auto 0; max-width:480px; font-size:16.5px; line-height:1.55; font-weight:500; color:#C6D8DC;">Our team is here Monday to Friday. Give us a call and we'll walk you through anything.</p>
+        <a href="tel:18559057414" style="margin-top:26px; display:inline-flex; align-items:center; gap:12px; background:#2E9CB0; color:#fff; font-size:18px; font-weight:700; padding:18px 32px; border-radius:999px; text-decoration:none; box-shadow:0 14px 32px -10px rgba(46,156,176,.55);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg>
+          Call 1-855-905-7414
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#FAFCFD; border-top:1px solid #EDF3F4;">
+    <div style="max-width:1320px; margin:0 auto; padding:80px 40px 40px; display:grid; grid-template-columns:1.1fr 1fr 1fr 1.1fr; gap:48px;">
+      <div>
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:46px; width:auto; display:block;">
+        <div style="margin-top:26px; display:flex; gap:12px;">
+          <a href="#" aria-label="Facebook" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"></path></svg></a>
+          <a href="#" aria-label="X" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18.2 2H21l-6.4 7.3L22 22h-6.3l-4.9-6.4L5.2 22H2.4l6.9-7.9L2 2h6.4l4.4 5.8L18.2 2zm-1.1 18h1.6L7 3.7H5.3L17.1 20z"></path></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Additional Info</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./do-i-need-one.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Do I Need A Medical Alert System?</a>
+          <a href="./in-the-home.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">In the Home</a>
+          <a href="./on-the-go.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">On the Go</a>
+          <a href="./alert-kits.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Alert Kits</a>
+          <a href="./blog.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Policies and Procedures</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./terms.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Terms &amp; Conditions</a>
+          <a href="./shipping.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Shipping &amp; Returns Policy</a>
+          <a href="#" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Monitoring Services</a>
+          <a href="#" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Privacy Policy</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Contact Information</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <p style="margin:0; font-size:16px; line-height:1.5; font-weight:500; color:#5A6B6F;">Galaxy Medical Alert Systems<br>361 Joffre Place, Windsor, ON N8X 2T1</p>
+          <a href="tel:18559057414" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">1-855-905-7414</a>
+          <a href="mailto:info@galaxymedicalalert.com" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">info@galaxymedicalalert.com</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #EDF3F4;">
+      <div style="max-width:1320px; margin:0 auto; padding:26px 40px; text-align:center; font-size:14.5px; font-weight:500; color:#8A999C;">Copyright © Galaxy Medical Alert Systems.</div>
+    </div>
+  </footer>
+
+</div>
+  <dc-import name="support-chatbot" hint-size="0px,0px"></dc-import>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./assets/js/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#fff; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:#2E9CB0; }
+  a:hover{ color:#1F7E96; }
+
+  .shop-dd{ position:relative; display:inline-flex; align-items:center; }
+  .shop-menu{ position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:16px; opacity:0; visibility:hidden; transition:opacity .15s ease; z-index:60; }
+  .shop-dd:hover .shop-menu{ opacity:1; visibility:visible; }
+  .shop-chev{ transition:transform .2s ease; }
+  .shop-dd:hover .shop-chev{ transform:rotate(180deg); }
+  .shop-item:hover{ background:#F4F9FB; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; width:100%; background:#fff;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(10px); border-bottom:1px solid #E8EFF1;">
+    <div style="max-width:1320px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px;">
+      <a href="./index.html" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:48px; width:auto; display:block;">
+      </a>
+      <nav style="display:flex; align-items:center; gap:38px;">
+        <a href="./index.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Home</a>
+        <a href="./about.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">About</a>
+        <div class="shop-dd">
+          <a href="./in-the-home.html" style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Shop
+            <svg class="shop-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="shop-menu">
+            <div style="min-width:270px; background:#fff; border:1px solid #E8EFF1; border-radius:16px; box-shadow:0 24px 50px -20px rgba(15,46,51,.35); padding:10px; display:flex; flex-direction:column;">
+              <a href="./in-the-home.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">At-Home System</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">In-home base unit</span></span>
+              </a>
+              <a href="./on-the-go.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0"></path><circle cx="12" cy="19" r="1.3" fill="#2E9CB0" stroke="none"></circle></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">On-the-Go GPS</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Mobile watch &amp; pendant</span></span>
+              </a>
+              <a href="./alert-kits.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">Alert Kits</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Essential, Plus &amp; Premier</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="./contact.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Contact</a>
+      </nav>
+      <a href="tel:18559057414" style="display:flex; align-items:center; gap:9px; background:#2E9CB0; color:#fff; font-size:15.5px; font-weight:700; padding:13px 22px; border-radius:999px; text-decoration:none; box-shadow:0 6px 16px rgba(46,156,176,.28);">
+        Call to Order
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO with logomark pattern -->
+  <section style="position:relative; background:#0F2E33; overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:url('./assets/images/pattern-tile.png'); background-repeat:repeat; background-size:185px 185px; opacity:.5; pointer-events:none;"></div>
+    <div style="position:relative; max-width:1000px; margin:0 auto; padding:88px 40px 80px; text-align:center;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#8DDCEA;">Free Self-Assessment</div>
+      <h1 style="margin:18px auto 0; max-width:760px; font-size:56px; line-height:1.05; font-weight:800; letter-spacing:-.024em; color:#fff; text-wrap:pretty;">Do I need a medical alert system?</h1>
+      <p style="margin:22px auto 0; max-width:640px; font-size:19px; line-height:1.6; font-weight:500; color:#C6D8DC;">Answer a few quick questions about daily life, health, and mobility. We'll tally your score and show whether a Personal Emergency Response System (PERS) is recommended for you or your loved one.</p>
+    </div>
+  </section>
+
+  <!-- WHAT IS A PERS -->
+  <section style="background:#fff;">
+    <div style="max-width:900px; margin:0 auto; padding:64px 40px 10px;">
+      <h2 style="margin:0 0 14px; font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-.015em; color:#0F2E33;">What is a medical alert system?</h2>
+      <p style="margin:0 0 18px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">A medical alert system is also known as a personal emergency response system (PERS). It is a live two-way voice hands-free communication system that functions similarly to a speakerphone. It consists of a base unit and a remote (usually worn by an individual in the form of a pendant, necklace, bracelet or belt clip). The base unit and remote have a help or panic button to be used for personal medical emergencies. Pushing the help button signals to the Response Centre that emergency medical help is needed immediately.</p>
+      <div style="background:#EAF6FA; border:1px solid #D3EAF1; border-radius:16px; padding:22px 26px; display:flex; gap:14px; align-items:flex-start;">
+        <span style="flex:none; margin-top:2px; width:26px; height:26px; border-radius:50%; background:#2E9CB0; display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16v-4M12 8h.01"></path><circle cx="12" cy="12" r="9"></circle></svg></span>
+        <p style="margin:0; font-size:16px; line-height:1.55; font-weight:600; color:#15768F;">Studies show that if you can get help within 1 hour following an emergency there is a 90% chance that you will maintain your independence. Some call this the "Golden Hour."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSESSMENT FORM -->
+  <section style="background:linear-gradient(180deg,#FFFFFF 0%,#F1F8FB 100%);">
+    <div style="max-width:900px; margin:0 auto; padding:56px 40px 90px;">
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:24px; box-shadow:0 24px 60px -34px rgba(15,46,51,.35); overflow:hidden;">
+
+        <div style="background:#0F2E33; padding:30px 40px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+          <div>
+            <h2 style="margin:0; font-size:24px; font-weight:800; letter-spacing:-.01em; color:#fff;">PERS Assessment / Evaluation</h2>
+            <p style="margin:6px 0 0; font-size:14.5px; font-weight:500; color:#C6D8DC;">All questions are optional. Your score updates as you go.</p>
+          </div>
+          <div style="text-align:center; background:rgba(141,220,234,.14); border:1px solid rgba(141,220,234,.3); border-radius:16px; padding:12px 24px;">
+            <div style="font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#8DDCEA;">Your score</div>
+            <div style="font-size:34px; font-weight:800; color:#fff; line-height:1.05;">{{ total }}</div>
+          </div>
+        </div>
+
+        <div style="padding:36px 40px;">
+
+          <!-- Yes/No questions -->
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_alone }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Do you live alone?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0 15px 34px; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_caregiver }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#46585C;">If not — at any time during the day/week is your caregiver away and you are left alone?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_fallen }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Have you fallen inside or outside your residence at least once during the past three years?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_dizzy }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Are there times when you feel weak or dizzy?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_fallnohelp }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Are you worried that you may fall and not be able to get up and call for help?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_shower }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Do you worry about taking a shower or bath alone? (e.g. falling, getting ill)</span></label>
+          </div>
+
+          <!-- Ailments -->
+          <div style="margin-top:30px;">
+            <h3 style="margin:0 0 6px; font-size:18px; font-weight:800; color:#0F2E33;">Do you have one or more of these ailments?</h3>
+            <p style="margin:0 0 16px; font-size:14.5px; font-weight:500; color:#8A999C;">Check all that apply — one point for each.</p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px 24px;">
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_arthritis }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Arthritis</span></label>
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_copd }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Chronic Obstructive Pulmonary Disease (COPD)</span></label>
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_chf }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Congestive Heart Failure (CHF)</span></label>
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_diabetes }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Diabetes</span></label>
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_hypertension }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Hypertension or High Blood Pressure</span></label>
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_lowvision }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Low Vision or Visual Impairments</span></label>
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_osteoporosis }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Osteoporosis</span></label>
+              <label style="display:flex; align-items:center; gap:12px; padding:10px 0; cursor:pointer;"><input type="checkbox" onChange="{{ mk_stroke }}" style="width:19px; height:19px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16px; font-weight:500; color:#23363A;">Stroke</span></label>
+            </div>
+          </div>
+
+          <!-- More yes/no -->
+          <div style="margin-top:20px; display:flex; flex-direction:column; gap:6px;">
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-top:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_medication }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Are you concerned that you may have a negative reaction to medication and not be able to get help? (e.g. insulin)</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_hospital }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Were you hospitalized or taken to the emergency room during the past two years?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_device }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Do you use a cane, walker, wheelchair, stair climber, or other device to help you balance or walk?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_harm }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Are you afraid that someone may harm you physically or break into your home?</span></label>
+            <label style="display:flex; align-items:center; gap:14px; padding:15px 0; border-bottom:1px solid #EEF3F4; cursor:pointer;"><input type="checkbox" onChange="{{ mk_unsafe }}" style="width:20px; height:20px; accent-color:#2E9CB0; flex:none;"><span style="font-size:16.5px; font-weight:600; color:#23363A;">Do you feel unsafe in your neighborhood?</span></label>
+          </div>
+
+          <!-- Difficulty scale questions -->
+          <div style="margin-top:30px;">
+            <h3 style="margin:0 0 6px; font-size:18px; font-weight:800; color:#0F2E33;">Mobility &amp; daily activities</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; font-weight:500; color:#8A999C;">Choose the answer that best describes your current ability.</p>
+
+            <div style="display:flex; flex-direction:column; gap:24px;">
+              <div>
+                <p style="margin:0 0 12px; font-size:16.5px; font-weight:600; color:#23363A;">How much difficulty do you currently have bending over from a standing position to pick something up without assistance?</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;"><button onClick="{{ s_bend_0 }}" style="{{ st_bend_0 }}">None</button><button onClick="{{ s_bend_1 }}" style="{{ st_bend_1 }}">Sometimes</button><button onClick="{{ s_bend_2 }}" style="{{ st_bend_2 }}">A lot</button><button onClick="{{ s_bend_3 }}" style="{{ st_bend_3 }}">I can't</button></div>
+              </div>
+              <div>
+                <p style="margin:0 0 12px; font-size:16.5px; font-weight:600; color:#23363A;">How much difficulty do you have carrying something in your arms while climbing stairs? (e.g. laundry basket)</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;"><button onClick="{{ s_carry_0 }}" style="{{ st_carry_0 }}">None</button><button onClick="{{ s_carry_1 }}" style="{{ st_carry_1 }}">Sometimes</button><button onClick="{{ s_carry_2 }}" style="{{ st_carry_2 }}">A lot</button><button onClick="{{ s_carry_3 }}" style="{{ st_carry_3 }}">I can't</button></div>
+              </div>
+              <div>
+                <p style="margin:0 0 12px; font-size:16.5px; font-weight:600; color:#23363A;">How much difficulty do you have walking up or down an incline? (e.g. driveway)</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;"><button onClick="{{ s_incline_0 }}" style="{{ st_incline_0 }}">None</button><button onClick="{{ s_incline_1 }}" style="{{ st_incline_1 }}">Sometimes</button><button onClick="{{ s_incline_2 }}" style="{{ st_incline_2 }}">A lot</button><button onClick="{{ s_incline_3 }}" style="{{ st_incline_3 }}">I can't</button></div>
+              </div>
+              <div>
+                <p style="margin:0 0 12px; font-size:16.5px; font-weight:600; color:#23363A;">How difficult is it to walk several blocks without assistance of some kind?</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;"><button onClick="{{ s_blocks_0 }}" style="{{ st_blocks_0 }}">None</button><button onClick="{{ s_blocks_1 }}" style="{{ st_blocks_1 }}">Sometimes</button><button onClick="{{ s_blocks_2 }}" style="{{ st_blocks_2 }}">A lot</button><button onClick="{{ s_blocks_3 }}" style="{{ st_blocks_3 }}">I can't</button></div>
+              </div>
+              <div>
+                <p style="margin:0 0 12px; font-size:16.5px; font-weight:600; color:#23363A;">How difficult is it for you to stand up from a soft surface? (e.g. couch)</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;"><button onClick="{{ s_stand_0 }}" style="{{ st_stand_0 }}">None</button><button onClick="{{ s_stand_1 }}" style="{{ st_stand_1 }}">Sometimes</button><button onClick="{{ s_stand_2 }}" style="{{ st_stand_2 }}">A lot</button><button onClick="{{ s_stand_3 }}" style="{{ st_stand_3 }}">I can't</button></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESULT -->
+          <div style="margin-top:36px; border-radius:18px; padding:30px 32px; background:{{ resultBg }}; border:1px solid {{ resultBorder }};">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+              <div style="font-size:15px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:{{ resultAccent }};">Recommendation</div>
+              <div style="font-size:15px; font-weight:700; color:{{ resultAccent }};">Score: {{ total }}</div>
+            </div>
+            <h3 style="margin:12px 0 0; font-size:26px; line-height:1.2; font-weight:800; letter-spacing:-.015em; color:#0F2E33;">{{ resultTitle }}</h3>
+            <p style="margin:12px 0 0; font-size:16.5px; line-height:1.6; font-weight:500; color:#46585C;">{{ resultBody }}</p>
+            <div style="margin-top:22px; display:flex; flex-wrap:wrap; gap:14px;">
+              <a href="./on-the-go.html" style="display:inline-flex; align-items:center; gap:11px; background:#2E9CB0; color:#fff; font-size:16px; font-weight:700; padding:15px 26px; border-radius:999px; text-decoration:none;">Find the Right System<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
+              <a href="tel:18559057414" style="display:inline-flex; align-items:center; gap:11px; background:#fff; color:#0F2E33; font-size:16px; font-weight:700; padding:15px 26px; border-radius:999px; text-decoration:none; border:1.5px solid #CBDDE2;">Call 1-855-905-7414</a>
+            </div>
+          </div>
+
+          <div style="margin-top:22px; display:grid; grid-template-columns:repeat(5,1fr); gap:8px;">
+            <div style="text-align:center; font-size:11.5px; font-weight:600; color:#8A999C; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:10px; padding:10px 6px;">0–3<br><span style="color:#5A6B6F;">May not need</span></div>
+            <div style="text-align:center; font-size:11.5px; font-weight:600; color:#8A999C; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:10px; padding:10px 6px;">4–7<br><span style="color:#5A6B6F;">May need</span></div>
+            <div style="text-align:center; font-size:11.5px; font-weight:600; color:#8A999C; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:10px; padding:10px 6px;">8–10<br><span style="color:#5A6B6F;">Likely needs</span></div>
+            <div style="text-align:center; font-size:11.5px; font-weight:600; color:#8A999C; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:10px; padding:10px 6px;">11–15<br><span style="color:#5A6B6F;">Probably needs</span></div>
+            <div style="text-align:center; font-size:11.5px; font-weight:600; color:#8A999C; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:10px; padding:10px 6px;">16+<br><span style="color:#5A6B6F;">Definitely</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <p style="margin:24px auto 0; max-width:760px; text-align:center; font-size:14px; line-height:1.6; font-weight:500; color:#8A999C;">This self-assessment is a guide only and is not medical advice. For a full evaluation, or to talk through your results, call us at 1-855-905-7414.</p>
+    </div>
+  </section>
+
+  <!-- PEACE OF MIND -->
+  <section style="background:#fff;">
+    <div style="max-width:900px; margin:0 auto; padding:80px 40px;">
+      <h2 style="margin:0 0 16px; font-size:32px; line-height:1.15; font-weight:800; letter-spacing:-.015em; color:#0F2E33; text-wrap:pretty;">For peace of mind &amp; independent living</h2>
+      <p style="margin:0 0 16px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Falls are a serious concern for an ageing population and can lead to devastating consequences. A simple fall can prevent you from continuing with your activities of daily living. Falls can also contribute to poor health and make independent living difficult. It is very important to take preventative measures and to make sure you have access to emergency medical help if a fall should occur.</p>
+      <p style="margin:0 0 24px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">If you or someone you know is prone to falling, we highly recommend our <a href="./index.html">Home Fall Detection System</a> or our <a href="./on-the-go.html">Mobile System with GPS &amp; Fall Detection</a> for safety and peace of mind.</p>
+      <div style="background:#F4F9FB; border:1px solid #E5EEF0; border-radius:20px; padding:30px 32px;">
+        <h3 style="margin:0 0 16px; font-size:18px; font-weight:800; color:#0F2E33;">Galaxy Medical Alert Systems can make independent living safer for:</h3>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px 24px;">
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:16px; font-weight:600; color:#23363A;">Individuals that live alone</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:16px; font-weight:600; color:#23363A;">Individuals that require special assistance</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:16px; font-weight:600; color:#23363A;">Ageing individuals that remain in their own homes</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:16px; font-weight:600; color:#23363A;">Individuals with medical conditions</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#FAFCFD; border-top:1px solid #EDF3F4;">
+    <div style="max-width:1320px; margin:0 auto; padding:80px 40px 40px; display:grid; grid-template-columns:1.1fr 1fr 1fr 1.1fr; gap:48px;">
+      <div>
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:46px; width:auto; display:block;">
+        <div style="margin-top:26px; display:flex; gap:12px;">
+          <a href="#" aria-label="Facebook" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"></path></svg></a>
+          <a href="#" aria-label="X" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18.2 2H21l-6.4 7.3L22 22h-6.3l-4.9-6.4L5.2 22H2.4l6.9-7.9L2 2h6.4l4.4 5.8L18.2 2zm-1.1 18h1.6L7 3.7H5.3L17.1 20z"></path></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Additional Info</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./do-i-need-one.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Do I Need A Medical Alert System?</a>
+          <a href="./in-the-home.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">In the Home</a>
+          <a href="./on-the-go.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">On the Go</a>
+          <a href="./alert-kits.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Alert Kits</a>
+          <a href="./blog.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Policies and Procedures</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./terms.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Terms &amp; Conditions</a>
+          <a href="./shipping.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Shipping &amp; Returns Policy</a>
+          <a href="./monitoring.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Monitoring Services</a>
+          <a href="./privacy.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Privacy Policy</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Contact Information</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <p style="margin:0; font-size:16px; line-height:1.5; font-weight:500; color:#5A6B6F;">Galaxy Medical Alert Systems<br>361 Joffre Place, Windsor, ON N8X 2T1</p>
+          <a href="tel:18559057414" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">1-855-905-7414</a>
+          <a href="mailto:info@galaxymedicalalert.com" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">info@galaxymedicalalert.com</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #EDF3F4;">
+      <div style="max-width:1320px; margin:0 auto; padding:26px 40px; text-align:center; font-size:14.5px; font-weight:500; color:#8A999C;">Copyright © Galaxy Medical Alert Systems.</div>
+    </div>
+  </footer>
+
+</div>
+  <dc-import name="support-chatbot" hint-size="0px,0px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    yn: {}, // yes/no + ailment booleans
+    scale: { bend: null, carry: null, incline: null, blocks: null, stand: null },
+  };
+
+  toggle(key) {
+    return (e) => {
+      const yn = { ...this.state.yn, [key]: e.target.checked };
+      this.setState({ yn });
+    };
+  }
+  setScale(field, val) {
+    return () => {
+      const scale = { ...this.state.scale, [field]: val };
+      this.setState({ scale });
+    };
+  }
+
+  renderVals() {
+    const yn = this.state.yn;
+    const scale = this.state.scale;
+    let total = 0;
+    Object.keys(yn).forEach((k) => { if (yn[k]) total += 1; });
+    ['bend', 'carry', 'incline', 'blocks', 'stand'].forEach((f) => {
+      if (scale[f] != null) total += scale[f];
+    });
+
+    let resultTitle, resultBody, accent, bg, border;
+    if (total <= 3) {
+      resultTitle = 'You may not need a PERS right now.';
+      resultBody = 'Based on your answers, a personal emergency response system may not be essential today. Circumstances change, so it\u2019s worth reassessing periodically \u2014 or call us to talk it through.';
+      accent = '#5A6B6F'; bg = '#F4F9FB'; border = '#E5EEF0';
+    } else if (total <= 7) {
+      resultTitle = 'You may need a PERS.';
+      resultBody = 'Your answers suggest a medical alert system could add meaningful safety and peace of mind. It\u2019s worth exploring your options.';
+      accent = '#B87A1E'; bg = '#FBF6EC'; border = '#F0E2C6';
+    } else if (total <= 10) {
+      resultTitle = 'You likely need a PERS.';
+      resultBody = 'Your score indicates a medical alert system is likely a good fit. We recommend speaking with our team about the right plan for you.';
+      accent = '#15768F'; bg = '#EAF6FA'; border = '#D3EAF1';
+    } else if (total <= 15) {
+      resultTitle = 'You probably need a PERS.';
+      resultBody = 'Your answers point strongly toward a medical alert system. A system with fall detection would give you and your family real reassurance.';
+      accent = '#15768F'; bg = '#EAF6FA'; border = '#D3EAF1';
+    } else {
+      resultTitle = 'You should definitely have a PERS.';
+      resultBody = 'Based on your answers, we strongly recommend a personal emergency response system \u2014 ideally with automatic fall detection. Call us and we\u2019ll help you get set up right away.';
+      accent = '#1F7E96'; bg = '#E4F2F6'; border = '#BFDFE7';
+    }
+
+    const out = {
+      total,
+      resultTitle, resultBody,
+      resultAccent: accent, resultBg: bg, resultBorder: border,
+    };
+
+    // yes/no + ailment handlers
+    const ynKeys = ['alone','caregiver','fallen','dizzy','fallnohelp','shower','arthritis','copd','chf','diabetes','hypertension','lowvision','osteoporosis','stroke','medication','hospital','device','harm','unsafe'];
+    ynKeys.forEach((k) => { out['mk_' + k] = this.toggle(k); });
+
+    // scale buttons + their styles
+    const base = { appearance:'none', border:'1.5px solid #DDE7EA', background:'#fff', cursor:'pointer', fontFamily:'inherit', fontSize:'15px', fontWeight:700, color:'#46585C', padding:'11px 20px', borderRadius:'999px' };
+    const active = { ...base, background:'#2E9CB0', color:'#fff', border:'1.5px solid #2E9CB0' };
+    const fields = ['bend','carry','incline','blocks','stand'];
+    fields.forEach((f) => {
+      for (let v = 0; v <= 3; v++) {
+        out['s_' + f + '_' + v] = this.setScale(f, v);
+        out['st_' + f + '_' + v] = (scale[f] === v) ? active : base;
+      }
+    });
+
+    return out;
+  }
+}
+</script>
+</body>
+</html>

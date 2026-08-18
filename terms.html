@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./assets/js/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#fff; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:#2E9CB0; }
+  a:hover{ color:#1F7E96; }
+
+  .shop-dd{ position:relative; display:inline-flex; align-items:center; }
+  .shop-menu{ position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:16px; opacity:0; visibility:hidden; transition:opacity .15s ease; z-index:60; }
+  .shop-dd:hover .shop-menu{ opacity:1; visibility:visible; }
+  .shop-chev{ transition:transform .2s ease; }
+  .shop-dd:hover .shop-chev{ transform:rotate(180deg); }
+  .shop-item:hover{ background:#F4F9FB; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; width:100%; background:#fff;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(10px); border-bottom:1px solid #E8EFF1;">
+    <div style="max-width:1320px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px;">
+      <a href="./index.html" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:48px; width:auto; display:block;">
+      </a>
+      <nav style="display:flex; align-items:center; gap:38px;">
+        <a href="./index.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Home</a>
+        <a href="./about.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">About</a>
+        <div class="shop-dd">
+          <a href="./in-the-home.html" style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Shop
+            <svg class="shop-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="shop-menu">
+            <div style="min-width:270px; background:#fff; border:1px solid #E8EFF1; border-radius:16px; box-shadow:0 24px 50px -20px rgba(15,46,51,.35); padding:10px; display:flex; flex-direction:column;">
+              <a href="./in-the-home.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">At-Home System</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">In-home base unit</span></span>
+              </a>
+              <a href="./on-the-go.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0"></path><circle cx="12" cy="19" r="1.3" fill="#2E9CB0" stroke="none"></circle></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">On-the-Go GPS</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Mobile watch &amp; pendant</span></span>
+              </a>
+              <a href="./alert-kits.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">Alert Kits</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Essential, Plus &amp; Premier</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="./contact.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Contact</a>
+      </nav>
+      <a href="./index.html" style="display:flex; align-items:center; gap:9px; background:#2E9CB0; color:#fff; font-size:15.5px; font-weight:700; padding:13px 22px; border-radius:999px; text-decoration:none; box-shadow:0 6px 16px rgba(46,156,176,.28);">
+        Get Started Now
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section style="background:linear-gradient(180deg,#F1F8FB 0%,#FFFFFF 100%);">
+    <div style="max-width:900px; margin:0 auto; padding:72px 40px 44px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#2E9CB0;">Policies &amp; Procedures</div>
+      <h1 style="margin:16px 0 0; font-size:46px; line-height:1.1; font-weight:800; letter-spacing:-.022em; color:#0F2E33; text-wrap:pretty;">Terms &amp; Conditions and Warranty Information</h1>
+      <p style="margin:18px 0 0; max-width:640px; font-size:18px; line-height:1.6; font-weight:500; color:#5A6B6F;">Galaxy Medical Alert Systems Ltd. Terms &amp; Conditions for Personal Emergency Response Systems (PERS), and Galaxy Medical Alert Systems Ltd.'s Warranty Information.</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <article style="max-width:900px; margin:0 auto; padding:20px 40px 40px;">
+
+    <h2 style="margin:0 0 28px; font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-.015em; color:#0F2E33; text-wrap:pretty;">Terms &amp; Conditions for Personal Emergency Response Systems (PERS)</h2>
+
+    <h3 style="margin:0 0 10px; font-size:20px; font-weight:800; color:#0F2E33;">Use of the Unit</h3>
+    <p style="margin:0 0 26px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">In an emergency or when help is needed, press the button on the personal emergency response system pendant or base unit and a Galaxy Medical Alert Systems Ltd. Response Center representative will ask if you need assistance.</p>
+
+    <h3 style="margin:0 0 10px; font-size:20px; font-weight:800; color:#0F2E33;">Testing of the Unit</h3>
+    <p style="margin:0 0 26px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Testing of the unit is not required. The unit is completely self-checking. However, Galaxy Medical Alert Systems Ltd. encourages subscribers to use or test the unit as often as desired. Subscribers are encouraged to press the button on the pendant or unit at least once a month, when the Response Center representative asks if help is needed, inform them that the unit is being tested.</p>
+
+    <h3 style="margin:0 0 10px; font-size:20px; font-weight:800; color:#0F2E33;">Information Changes</h3>
+    <p style="margin:0 0 26px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">To update subscriber information such as, phone numbers, addresses, and or responder information, contact Galaxy Medical Alert Systems Ltd. toll-free at 1-855-905-7414.</p>
+
+    <h3 style="margin:0 0 10px; font-size:20px; font-weight:800; color:#0F2E33;">Payments</h3>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;"><strong style="color:#0F2E33; font-weight:700;">Private Pay Customers:</strong> While under contract, private pay customers are responsible for any financial charges and/or payments to Galaxy Medical Alert Systems Ltd. If you have provided your credit card information to Galaxy Medical Alert Systems Ltd., recurring charges will be made using that card. If you have provided bank account information to Galaxy Medical Alert Systems Ltd., funds will automatically be drafted from that account.</p>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;"><strong style="color:#0F2E33; font-weight:700;">Agency/Government Customers:</strong> Payment for approved services has been arranged and contracted through the agency providing service. The subscriber is not responsible for payments on those approved services.</p>
+
+    <div style="border-top:1px solid #EDF3F4; margin-bottom:34px;"></div>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">1. Release of Information and Receipt of Unit Instructions.</h3>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">You are authorizing Galaxy Medical Alert Systems Ltd. to release your personal information to other sources involved in providing your care. You are also acknowledging the receipt of the personal emergency response system, training by our representative, written instructions on the use and testing of the PERS, as well as how to contact Galaxy Medical Alert Systems Ltd. for any reason.</p>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">No change to the PERS unit location or changes to telephone wiring may be made by the subscriber without prior notice to Galaxy Medical Alert Systems Ltd.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">2. Subscriber's Duties:</h3>
+    <ul style="margin:0 0 34px; padding:0; list-style:none; display:flex; flex-direction:column; gap:14px;">
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:18px;">A.</span><span>No changes or additions shall be made to the phone network, or any device currently connected to the phone system without a Galaxy Medical Alert Systems Ltd. representative being present to test the system. Phone jacks unused at the time of installation shall remain unused.</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:18px;">B.</span><span>Subscriber shall not use any caller ID blocking services or devices and acknowledges that Galaxy Medical Alert Systems Ltd. requires this information to provide service.</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:18px;">C.</span><span>Subscriber shall not attach or connect any apparatus or device to the system. Subscriber shall not disturb, remove, relocate, or move the system.</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:18px;">D.</span><span>Subscriber shall supply 24-hour 110-volt circuits as required to power the system.</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:18px;">E.</span><span>Subscriber shall provide uninterrupted telephone service or any other equipment that may be deemed necessary to maintain and keep the system operational. Telephone service over the Internet or using digital phone lines may be disrupted when no electrical service is present, when Internet bandwidth is insufficient, or when power is disabled, preventing the unit from calling Galaxy Medical Alert Systems Ltd.</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:18px;">F.</span><span>Subscriber shall provide responders with access to his or her home. This document also authorizes other parties in control of the premises, including property managers, caretakers, and maintenance personnel, to grant access to Galaxy Medical Alert Systems Ltd. to pick up or perform service on equipment.</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:18px;">G.</span><span>If Galaxy Medical Alert Systems Ltd. is unable to gain access to the home, the subscriber hereby authorizes the police to assist in entry into the home at the expense of the subscriber's estate. Failure to return the equipment will result in a charge for the equipment or in theft charges being filed.</span></li>
+    </ul>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">3. Privacy Notice:</h3>
+    <p style="margin:0 0 8px; font-size:17px; line-height:1.4; font-weight:700; color:#0F2E33;">Uses of health care information:</p>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Subscriber health care information shall be provided to organizations for reason of treatment and/or safety. Health care information, including but not limited to, information provided via the med-connect service or our website, may be provided at our discretion, to individuals responding to assist in an emergency situation.</p>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">It is important to keep your health care information updated and current so that Galaxy Medical Alert Systems Ltd. can provide accurate information to responders and emergency personnel. Personal and health care information may be provided to our business associates in order to invoice agencies or providers for services rendered on behalf of their members.</p>
+    <p style="margin:0 0 8px; font-size:17px; line-height:1.4; font-weight:700; color:#0F2E33;">Disclosures of health care information:</p>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">In certain situations, it may be necessary to disclose health care information under State and Provincial legal regulations such as Adult Protective Services. Galaxy Medical Alert Systems Ltd. will comply with Provincial and State laws and will notify the subscriber of said disclosure.</p>
+    <p style="margin:0 0 8px; font-size:17px; line-height:1.4; font-weight:700; color:#0F2E33;">Your Rights:</p>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">To access your health care information, please contact the Privacy Officer. An access request form may be obtained by contacting the Privacy Officer at 1-855-905-7414.</p>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Access shall mean: the right to see data, the right to request amendments to the data, the right to the accounting of disclosures made by the provider, the right to place restrictions on uses and disclosures, and the right for the communications to be confidential.</p>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">The Privacy Officer will respond to your request in writing within sixty (60) days. If your request is denied you may request an independent review of your request. The independent review form may be obtained by contacting the Privacy Officer at 1-855-905-7414 and is to be submitted to the Privacy Officer once complete. The independent review will take place and be responded to within sixty (60) days.</p>
+    <div style="margin:0 0 34px; background:#F4F9FB; border:1px solid #E5EEF0; border-radius:16px; padding:24px 28px;">
+      <p style="margin:0 0 6px; font-size:15px; font-weight:800; color:#0F2E33;">Privacy Officer:</p>
+      <p style="margin:0; font-size:16px; line-height:1.6; font-weight:500; color:#5A6B6F;">The designated Privacy Officer for Galaxy Medical Alert Systems Ltd. is Chris Bertelli.<br>361 Joffre Place, Windsor, ON N8X 2T1, Canada<br>Toll-Free: 1-855-905-7414</p>
+    </div>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">4. Terms of the Agreement:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">This agreement shall continue for three months and renew automatically unless either party notifies the other, in writing, 30 days prior to the expiration of this agreement. Payment for services shall be monthly, quarterly, or yearly.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">5. Assignees:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Galaxy Medical Alert Systems Ltd. may transfer or assign the Agreement to any other company at any time. This agreement will remain in force and shall apply to the other company in the same manner as it applies to Galaxy Medical Alert Systems Ltd.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">6. Prepaid Fees:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Upon termination of this agreement, Galaxy Medical Alert Systems Ltd. will attempt to refund any prepaid subscriber fees for a period of 90 days from termination, so long as all company owned equipment is returned or recovered. If equipment is damaged or not recovered, Galaxy Medical Alert Systems Ltd. is entitled to offset any and all charges against prepaid subscription fees. If after 90 days, the subscriber or the subscriber's estate has not successfully contacted Galaxy Medical Alert Systems Ltd., all prepaid subscription fees will be forfeited and Galaxy Medical Alert Systems Ltd. will not be required to refund any payments at any time.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">7. Galaxy Medical Alert Systems Ltd. is Not an Insurer.</h3>
+    <p style="margin:0 0 12px; font-size:16px; font-weight:700; letter-spacing:.02em; color:#0F2E33;">LIMITATION OF LIABILITY:</p>
+    <p style="margin:0 0 12px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Subscriber understands that:</p>
+    <ul style="margin:0 0 16px; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px;">
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(a)</span><span>the amount paid to Galaxy Medical Alert Systems Ltd. is based only on the value of the service provided;</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(b)</span><span>the system may not always operate properly for various reasons;</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(c)</span><span>it is difficult to determine how fast the police or fire department, paramedic unit, or other responders would respond to an alarm signal or dispatch;</span></li>
+      <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; font-weight:500; color:#3D4F53;"><span style="flex:none; font-weight:800; color:#2E9CB0; min-width:22px;">(d)</span><span>it is difficult to determine what portion, if any, of personal injury or death would be caused by failure of the system.</span></li>
+    </ul>
+    <p style="margin:0 0 12px; font-size:16px; font-weight:700; letter-spacing:.02em; color:#0F2E33;">THEREFORE THE SUBSCRIBER AGREES:</p>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Even if a court of competent jurisdiction decides that a failure of the system allowed any harm (whether personal injury or death) to the subscriber or anyone on the premises using the system, the subscriber agrees that Galaxy Medical Alert Systems Ltd.'s liability shall be limited to $500.00, and this shall be the subscriber's only remedy regardless of any legal theory used to determine that Galaxy Medical Alert Systems Ltd. was liable for any injury or loss.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">8. Third Party Indemnification and Subrogation:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">If anyone other than the subscriber asks us to pay for any harm (including personal injury or death) connected with or resulting from a failure of the system, the subscriber will reimburse Galaxy Medical Alert Systems Ltd. for any amount that a court orders to be paid or that Galaxy Medical Alert Systems Ltd. reasonably agrees to pay, including the amount of attorney's fees and any other loss and/or cost that may be paid in connection with aforementioned harm.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">9. Limitations or Lawsuits;</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;"><strong style="color:#0F2E33; font-weight:700;">WAIVER OF JURY TRIAL:</strong> Both parties agree that no lawsuit or any other legal proceeding connected with this agreement shall be brought forth or filed more than one year after an incident. In addition, any such legal proceedings shall not be heard before a jury. Each party gives up any right to a jury trial.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">10. Entire Agreement:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">The entire and only agreement between the subscriber and Galaxy Medical Alert Systems Ltd. is written in this agreement. It replaces any earlier oral or written understanding or agreements. It may only be changed by a written agreement signed by the subscriber and Galaxy Medical Alert Systems Ltd. If any provision of the agreement is found to be invalid or is illegal by a court, the balance of the agreement shall remain in force. The subscriber agrees that the laws of the State of Michigan and/or Province of Ontario shall govern this agreement.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">11. Our Limited Liability:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">We make no express warranty concerning the operation of the system. This agreement limits our liability to $500.00 if the subscriber or anyone else suffers any harm (personal injury or death) because the system failed to operate properly, the actions of responders or emergency personnel were improper or inadequate, or Galaxy Medical Alert Systems Ltd. representatives were careless or acted improperly.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">12. Telephone Lines:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">If the subscriber has more than one telephone extension in the household using the same number, and if one of those telephones is in use or off the hook, the system will not operate without installation of an RJ31X jack or line seizures on all phone jacks.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">13. Acts of God:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Galaxy Medical Alert Systems Ltd. may terminate this agreement if it cannot maintain or secure transmission privileges and shall not be liable for any damages or penalties as a result of such termination. Galaxy Medical Alert Systems Ltd. may cancel this agreement without previous notice in the event that Galaxy Medical Alert Systems Ltd. Emergency Response Centers are destroyed or damaged by any catastrophe and it is impractical to restore service, or it cannot be restored in a timely manner.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">14. Interpretation of Services:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">Galaxy Medical Alert Systems Ltd. assumes no liability for delays in equipment installation, interruption of services due to strikes, riots, floods, fire, acts of God, mechanical or electrical equipment failures, or any cause beyond the control of Galaxy Medical Alert Systems Ltd. and will not be required to supply services while said interruption may continue.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">15. Suspension or Cancellation:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">In the event the subscriber violates any part of this agreement, abandons or sublets the premises, causes an excessive number of false alarms, or if the account is more than 30 days past due, Galaxy Medical Alert Systems Ltd. may suspend all services and terminate this agreement upon giving five (5) days written notice to the subscriber. In such event, Galaxy Medical Alert Systems Ltd. shall have the right to sever the connection and render the system inoperative and to collect any unpaid debts.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">16. Medical or Related Expenses:</h3>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">In the event the subscriber utilizes the system by transmitting a signal to Galaxy Medical Alert Systems Ltd., the subscriber does hereby authorize Galaxy Medical Alert Systems Ltd. to seek to notify or obtain assistance on the subscriber's behalf. The subscriber shall be obligated for and agrees to pay any cost and expenses incurred in obtaining assistance, including but not limited to: ambulance, police, physician, nurse, hospital, or other medical assistance, transportation, or any other cost whatsoever incurred as a result of the subscriber's use of the system.</p>
+
+    <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#0F2E33;">17. Forcible Entry:</h3>
+    <p style="margin:0 0 40px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">The subscriber authorizes Galaxy Medical Alert Systems Ltd., in its sole discretion to authorize entry to the subscriber's premises in the event a signal is transmitted to the Galaxy Medical Alert Systems Ltd. Emergency Response Center. Galaxy Medical Alert Systems Ltd. is relieved from any and all liability whatsoever as a result of said entry, including damages to property as a result of forcible entry by emergency personnel.</p>
+
+    <div style="border-top:1px solid #EDF3F4; margin-bottom:36px;"></div>
+
+    <h2 style="margin:0 0 16px; font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-.015em; color:#0F2E33;">Warranty Information</h2>
+    <p style="margin:0 0 30px; font-size:17px; line-height:1.65; font-weight:500; color:#3D4F53;">The following are questions and answers that are commonly asked by clients of Galaxy Medical Alert Systems Ltd. If you have a question that you do not see listed below, please do not hesitate to contact us and one of our representatives will be happy to answer your question.</p>
+
+    <div style="display:flex; flex-direction:column; gap:20px;">
+      <div style="background:#F4F9FB; border:1px solid #E5EEF0; border-radius:16px; padding:28px 30px;">
+        <h3 style="margin:0 0 12px; font-size:19px; font-weight:800; color:#0F2E33;">What happens if the Galaxy Medical Alert System breaks?</h3>
+        <p style="margin:0; font-size:16.5px; line-height:1.6; font-weight:500; color:#5A6B6F;">The Galaxy Medical Alert system has been fully checked over and tested before being shipped to you. If for some reason the unit does not work because of normal wear and tear simply call our toll-free number and we will send out a replacement part right away. If the unit is not working because of misuse or abuse, Galaxy Medical Alert Systems Ltd. reserves the right to charge the customer for replacing the broken part. It is the customer's responsibility to return the broken part(s) to Galaxy Medical Alert Systems Ltd.</p>
+      </div>
+      <div style="background:#F4F9FB; border:1px solid #E5EEF0; border-radius:16px; padding:28px 30px;">
+        <h3 style="margin:0 0 12px; font-size:19px; font-weight:800; color:#0F2E33;">Does the Galaxy Medical Alert System come with a warranty?</h3>
+        <p style="margin:0; font-size:16.5px; line-height:1.6; font-weight:500; color:#5A6B6F;">Yes, the Galaxy Medical Alert system comes with a warranty. For as long as you subscribe to the Galaxy Medical Alert service, all parts are warranted under your service plan. Again, Galaxy Medical Alert Systems Ltd. will only cover normal wear and tear use. Should you have any questions, please call our toll-free number at 1-855-905-7414.</p>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- HELP / CALL CTA -->
+  <section style="background:linear-gradient(180deg,#FFFFFF 0%,#F1F8FB 100%);">
+    <div style="max-width:900px; margin:0 auto; padding:20px 40px 80px;">
+      <div style="background:#0F2E33; border-radius:22px; padding:44px 40px; text-align:center;">
+        <h2 style="margin:0; font-size:28px; line-height:1.2; font-weight:800; letter-spacing:-.015em; color:#fff;">Have questions or need more help?</h2>
+        <p style="margin:14px auto 0; max-width:480px; font-size:16.5px; line-height:1.55; font-weight:500; color:#C6D8DC;">Our team is here Monday to Friday. Give us a call and we'll walk you through anything.</p>
+        <a href="tel:18559057414" style="margin-top:26px; display:inline-flex; align-items:center; gap:12px; background:#2E9CB0; color:#fff; font-size:18px; font-weight:700; padding:18px 32px; border-radius:999px; text-decoration:none; box-shadow:0 14px 32px -10px rgba(46,156,176,.55);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg>
+          Call 1-855-905-7414
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#FAFCFD; border-top:1px solid #EDF3F4;">
+    <div style="max-width:1320px; margin:0 auto; padding:80px 40px 40px; display:grid; grid-template-columns:1.1fr 1fr 1fr 1.1fr; gap:48px;">
+      <div>
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:46px; width:auto; display:block;">
+        <div style="margin-top:26px; display:flex; gap:12px;">
+          <a href="#" aria-label="Facebook" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"></path></svg></a>
+          <a href="#" aria-label="X" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18.2 2H21l-6.4 7.3L22 22h-6.3l-4.9-6.4L5.2 22H2.4l6.9-7.9L2 2h6.4l4.4 5.8L18.2 2zm-1.1 18h1.6L7 3.7H5.3L17.1 20z"></path></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Additional Info</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./do-i-need-one.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Do I Need A Medical Alert System?</a>
+          <a href="./in-the-home.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">In the Home</a>
+          <a href="./on-the-go.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">On the Go</a>
+          <a href="./alert-kits.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Alert Kits</a>
+          <a href="./blog.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Policies and Procedures</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./terms.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Terms &amp; Conditions</a>
+          <a href="#" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Shipping &amp; Returns Policy</a>
+          <a href="#" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Monitoring Services</a>
+          <a href="#" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Privacy Policy</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Contact Information</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <p style="margin:0; font-size:16px; line-height:1.5; font-weight:500; color:#5A6B6F;">Galaxy Medical Alert Systems<br>361 Joffre Place, Windsor, ON N8X 2T1</p>
+          <a href="tel:18559057414" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">1-855-905-7414</a>
+          <a href="mailto:info@galaxymedicalalert.com" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">info@galaxymedicalalert.com</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #EDF3F4;">
+      <div style="max-width:1320px; margin:0 auto; padding:26px 40px; text-align:center; font-size:14.5px; font-weight:500; color:#8A999C;">Copyright © Galaxy Medical Alert Systems.</div>
+    </div>
+  </footer>
+
+</div>
+  <dc-import name="support-chatbot" hint-size="0px,0px"></dc-import>
+</x-dc>
+</body>
+</html>

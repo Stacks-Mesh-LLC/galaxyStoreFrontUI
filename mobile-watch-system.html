@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./assets/js/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#F7FAFB; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:#2E9CB0; }
+  a:hover{ color:#1F7E96; }
+
+  .shop-dd{ position:relative; display:inline-flex; align-items:center; }
+  .shop-menu{ position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:16px; opacity:0; visibility:hidden; transition:opacity .15s ease; z-index:60; }
+  .shop-dd:hover .shop-menu{ opacity:1; visibility:visible; }
+  .shop-chev{ transition:transform .2s ease; }
+  .shop-dd:hover .shop-chev{ transform:rotate(180deg); }
+  .shop-item:hover{ background:#F4F9FB; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; width:100%; background:#F7FAFB;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); backdrop-filter:blur(10px); border-bottom:1px solid #E8EFF1;">
+    <div style="max-width:1320px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px;">
+      <a href="./index.html" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:48px; width:auto; display:block;">
+      </a>
+      <nav style="display:flex; align-items:center; gap:38px;">
+        <a href="./index.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Home</a>
+        <a href="./about.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">About</a>
+        <div class="shop-dd">
+          <a href="./in-the-home.html" style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Shop
+            <svg class="shop-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="shop-menu">
+            <div style="min-width:270px; background:#fff; border:1px solid #E8EFF1; border-radius:16px; box-shadow:0 24px 50px -20px rgba(15,46,51,.35); padding:10px; display:flex; flex-direction:column;">
+              <a href="./in-the-home.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">At-Home System</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">In-home base unit</span></span>
+              </a>
+              <a href="./on-the-go.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0"></path><circle cx="12" cy="19" r="1.3" fill="#2E9CB0" stroke="none"></circle></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">On-the-Go GPS</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Mobile watch &amp; pendant</span></span>
+              </a>
+              <a href="./alert-kits.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">Alert Kits</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Essential, Plus &amp; Premier</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="./contact.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Contact</a>
+      </nav>
+      <a href="tel:18559057414" style="display:flex; align-items:center; gap:9px; background:#2E9CB0; color:#fff; font-size:15.5px; font-weight:700; padding:13px 22px; border-radius:999px; text-decoration:none; box-shadow:0 6px 16px rgba(46,156,176,.28);">
+        Call to Order
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- PROMO BAR -->
+  <div style="background:#0F2E33;">
+    <div style="max-width:1320px; margin:0 auto; padding:11px 40px; display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; text-align:center;">
+      <span style="font-size:14.5px; font-weight:700; color:#8DDCEA;">★ Get 2 months free on all annual plans</span>
+      <span style="width:4px; height:4px; border-radius:50%; background:#3E6068;"></span>
+      <span style="font-size:14.5px; font-weight:600; color:#DCEAED;">Order by phone: <a href="tel:18559057414" style="color:#fff; font-weight:800; text-decoration:none;">1-855-905-7414</a></span>
+    </div>
+  </div>
+
+  <!-- TOP: GALLERY + BUY BOX -->
+  <section style="max-width:1320px; margin:0 auto; padding:24px 40px 8px;">
+    <div style="font-size:14px; font-weight:600; color:#8A999C; margin-bottom:20px;"><a href="./in-the-home.html" style="color:#8A999C; text-decoration:none;">Shop</a> <span style="color:#C6D2D5;">/</span> <a href="./on-the-go.html" style="color:#8A999C; text-decoration:none;">On the Go</a> <span style="color:#C6D2D5;">/</span> <span style="color:#0F2E33;">Mobile Watch System with GPS &amp; Fall Protection</span></div>
+
+    <div style="display:grid; grid-template-columns:1.15fr 0.85fr; gap:40px; align-items:start;">
+
+      <!-- GALLERY -->
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:22px; padding:20px; box-shadow:0 14px 40px -30px rgba(15,46,51,.4);">
+        <div style="position:relative; border-radius:14px; overflow:hidden; background:#fff; aspect-ratio:16/11;">
+          <img src="{{ mainImg }}" alt="Mobile Watch System product view" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;">
+        </div>
+        <div style="margin-top:14px; display:grid; grid-template-columns:repeat(4,1fr); gap:10px;">
+          <button onClick="{{ img0 }}" style="{{ thumb0 }}"><img src="./assets/images/watch-front.webp" alt="Watch front" style="width:100%; height:100%; object-fit:contain; display:block;"></button>
+          <button onClick="{{ img1 }}" style="{{ thumb1 }}"><img src="./assets/images/watch-back.webp" alt="Watch side and back" style="width:100%; height:100%; object-fit:contain; display:block;"></button>
+          <button onClick="{{ img2 }}" style="{{ thumb2 }}"><img src="./assets/images/watch-lifestyle.webp" alt="Watch features" style="width:100%; height:100%; object-fit:contain; display:block;"></button>
+          <button onClick="{{ img3 }}" style="{{ thumb3 }}"><img src="./assets/images/watch-dimensions.webp" alt="Watch dimensions" style="width:100%; height:100%; object-fit:contain; display:block;"></button>
+        </div>
+      </div>
+
+      <!-- BUY BOX -->
+      <div style="position:sticky; top:100px; background:#fff; border:1px solid #E5EEF0; border-radius:22px; padding:32px 32px; box-shadow:0 20px 50px -34px rgba(15,46,51,.4);">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="display:flex; gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+          <span style="font-size:13.5px; font-weight:600; color:#8A999C;">Trusted by families across Canada</span>
+        </div>
+        <h1 style="margin:14px 0 0; font-size:30px; line-height:1.1; font-weight:800; letter-spacing:-.02em; color:#0F2E33;">Mobile Watch System with GPS &amp; Fall Protection</h1>
+        <p style="margin:12px 0 0; font-size:15.5px; line-height:1.55; font-weight:500; color:#5A6B6F;">A rugged GPS smartwatch with automatic fall detection and hands-free two-way voice — protection wherever an active life goes.</p>
+
+        <div style="margin-top:18px; display:flex; align-items:baseline; gap:8px;">
+          <span style="font-size:14px; font-weight:600; color:#8A999C;">From</span>
+          <span style="font-size:40px; font-weight:800; letter-spacing:-.02em; color:#0F2E33;">{{ priceLabel }}</span>
+          <span style="font-size:15px; font-weight:600; color:#8A999C;">{{ period }}</span>
+        </div>
+
+        <!-- Billing -->
+        <div style="margin-top:22px;">
+          <div style="font-size:14px; font-weight:800; color:#0F2E33; margin-bottom:10px;">Billing frequency</div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px;">
+            <button onClick="{{ bill_m }}" style="{{ st_bill_m }}">Monthly</button>
+            <button onClick="{{ bill_q }}" style="{{ st_bill_q }}">Quarterly</button>
+            <button onClick="{{ bill_y }}" style="{{ st_bill_y }}">Yearly</button>
+          </div>
+          <sc-if value="{{ isYearly }}" hint-placeholder-val="{{ false }}"><div style="margin-top:10px; font-size:13px; font-weight:700; color:#2FA36B;">✓ 2 months free included</div></sc-if>
+        </div>
+
+        <!-- Text To Locate add-on -->
+        <div style="margin-top:22px;">
+          <div style="font-size:14px; font-weight:800; color:#0F2E33; margin-bottom:10px;">Would you like to add Text To Locate App? <span style="color:#C0392B;">*</span></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <button onClick="{{ ttl_no }}" style="{{ st_ttl_no }}"><span style="display:flex; align-items:center; gap:8px; font-size:15px; font-weight:700;"><span style="{{ radio_ttl_no }}"></span>No</span></button>
+            <button onClick="{{ ttl_yes }}" style="{{ st_ttl_yes }}"><span style="display:flex; align-items:center; gap:8px; font-size:15px; font-weight:700;"><span style="{{ radio_ttl_yes }}"></span>Yes</span><span style="display:block; margin-top:6px; font-size:12.5px; font-weight:600; color:#5A6B6F;">$5/mo · $15/qtr · $50/yr</span></button>
+          </div>
+        </div>
+
+        <!-- Colour removed -->
+
+        <!-- Total + CTA -->
+        <div style="margin-top:22px; border-top:1px solid #EEF3F4; padding-top:20px;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <span style="font-size:15px; font-weight:700; color:#0F2E33;">Total today</span>
+            <span style="font-size:28px; font-weight:800; letter-spacing:-.02em; color:#15768F;">{{ totalLabel }}</span>
+          </div>
+          <button onClick="{{ addToCart }}" style="margin-top:16px; width:100%; display:flex; align-items:center; justify-content:center; gap:12px; background:#0F2E33; color:#fff; font-family:inherit; font-size:17px; font-weight:700; padding:18px 30px; border:none; border-radius:999px; cursor:pointer; box-shadow:0 14px 32px -12px rgba(15,46,51,.5);">{{ cartLabel }}<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h15l-1.5 9h-12z"></path><path d="M5 7 4 3H2"></path><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle></svg></button>
+          <a href="tel:18559057414" style="margin-top:10px; width:100%; display:flex; align-items:center; justify-content:center; gap:10px; background:#fff; color:#0F2E33; font-size:16px; font-weight:700; padding:15px 28px; border-radius:999px; text-decoration:none; border:1.5px solid #CBDDE2;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg>Order by phone</a>
+          <p style="margin:14px 0 0; font-size:12.5px; line-height:1.5; font-weight:500; color:#8A999C; text-align:center;">Recipient, emergency contacts &amp; lockbox details are collected securely at checkout.</p>
+        </div>
+
+        <!-- Trust badges -->
+        <div style="margin-top:20px; border-top:1px solid #EEF3F4; padding-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><span style="font-size:13.5px; font-weight:600; color:#46585C;">Free equipment</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><span style="font-size:13.5px; font-weight:600; color:#46585C;">Free shipping</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><span style="font-size:13.5px; font-weight:600; color:#46585C;">Free lock box</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><span style="font-size:13.5px; font-weight:600; color:#46585C;">No contract</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORDER DETAILS FORM -->
+  <section style="max-width:1320px; margin:0 auto; padding:16px 40px 8px;">
+    <div style="background:#fff; border:1px solid #E5EEF0; border-radius:22px; padding:38px 40px; box-shadow:0 14px 40px -34px rgba(15,46,51,.4);">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span style="flex:none; width:38px; height:38px; border-radius:10px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg></span>
+        <h2 style="margin:0; font-size:26px; font-weight:800; letter-spacing:-.01em; color:#0F2E33;">Order details</h2>
+      </div>
+      <p style="margin:12px 0 0; font-size:14px; font-weight:600; color:#8A999C;"><span style="color:#C0392B;">*</span> indicates required fields</p>
+
+      <!-- MONITORED PERSON -->
+      <h3 style="margin:32px 0 4px; font-size:19px; font-weight:800; color:#0F2E33;">Monitored Person Details</h3>
+      <p style="margin:0 0 20px; font-size:15px; font-weight:500; color:#5A6B6F;">Please fill out the following information about the monitored person.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px 24px;">
+        <div>
+          <label style="{{ lbl }}">Name <span style="color:#C0392B;">*</span></label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <span><input type="text" placeholder="First" style="{{ inp }}"><span style="{{ hint }}">First</span></span>
+            <span><input type="text" placeholder="Last" style="{{ inp }}"><span style="{{ hint }}">Last</span></span>
+          </div>
+        </div>
+        <div>
+          <label style="{{ lbl }}">Date of Birth <span style="color:#C0392B;">*</span></label>
+          <input type="text" placeholder="mm/dd/yyyy" style="{{ inp }}">
+          <span style="{{ hint }}">MM / DD / YYYY</span>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <label style="{{ lbl }}">Address <span style="color:#C0392B;">*</span></label>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span><input type="text" placeholder="Street Address" style="{{ inp }}"><span style="{{ hint }}">Street Address</span></span>
+          <span><input type="text" placeholder="Address Line 2" style="{{ inp }}"><span style="{{ hint }}">Address Line 2</span></span>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <span><input type="text" placeholder="City" style="{{ inp }}"><span style="{{ hint }}">City</span></span>
+            <span><input type="text" placeholder="Province / Region" style="{{ inp }}"><span style="{{ hint }}">State / Province / Region</span></span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <span><input type="text" placeholder="ZIP / Postal Code" style="{{ inp }}"><span style="{{ hint }}">ZIP / Postal Code</span></span>
+            <span><select style="{{ inp }}"><option>Canada</option><option>United States</option></select><span style="{{ hint }}">Country</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:18px 24px;">
+        <div><label style="{{ lbl }}">Phone Number <span style="color:#C0392B;">*</span></label><input type="tel" style="{{ inp }}"></div>
+        <div><label style="{{ lbl }}">Email Address</label><input type="email" style="{{ inp }}"></div>
+        <div>
+          <label style="{{ lbl }}">Gender <span style="color:#C0392B;">*</span></label>
+          <div style="display:flex; gap:24px; padding-top:8px;">
+            <label style="display:flex; align-items:center; gap:8px; font-size:15.5px; font-weight:600; color:#23363A; cursor:pointer;"><input type="radio" name="gender" style="width:17px; height:17px; accent-color:#2E9CB0;">Male</label>
+            <label style="display:flex; align-items:center; gap:8px; font-size:15.5px; font-weight:600; color:#23363A; cursor:pointer;"><input type="radio" name="gender" style="width:17px; height:17px; accent-color:#2E9CB0;">Female</label>
+          </div>
+        </div>
+        <div><label style="{{ lbl }}">Language Spoken <span style="color:#C0392B;">*</span></label><input type="text" style="{{ inp }}"></div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <label style="{{ lbl }}">Medical Conditions / Allergies</label>
+        <textarea rows="3" style="{{ inp }} resize:vertical;"></textarea>
+      </div>
+
+      <!-- EMERGENCY CONTACTS -->
+      <h3 style="margin:36px 0 4px; font-size:19px; font-weight:800; color:#0F2E33;">Emergency Contact List</h3>
+      <p style="margin:0 0 20px; font-size:15px; font-weight:500; color:#5A6B6F;">Please enter the contact information for at least 1 emergency contact.</p>
+
+      <div style="border:1px solid #EEF3F4; border-radius:16px; padding:22px 24px; margin-bottom:16px;">
+        <div style="font-size:15px; font-weight:800; color:#2E9CB0; margin-bottom:16px;">Contact #1 <span style="color:#C0392B;">*</span></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;">
+          <div><label style="{{ lbl }}">Name <span style="color:#C0392B;">*</span></label><div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;"><span><input type="text" placeholder="First" style="{{ inp }}"><span style="{{ hint }}">First</span></span><span><input type="text" placeholder="Last" style="{{ inp }}"><span style="{{ hint }}">Last</span></span></div></div>
+          <div></div>
+          <div><label style="{{ lbl }}">Phone Number <span style="color:#C0392B;">*</span></label><input type="tel" style="{{ inp }}"></div>
+          <div><label style="{{ lbl }}">Secondary Number</label><input type="tel" style="{{ inp }}"></div>
+        </div>
+      </div>
+
+      <div style="border:1px solid #EEF3F4; border-radius:16px; padding:22px 24px; margin-bottom:16px;">
+        <div style="font-size:15px; font-weight:800; color:#0F2E33; margin-bottom:16px;">Contact #2</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;">
+          <div><label style="{{ lbl }}">Name</label><div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;"><span><input type="text" placeholder="First" style="{{ inp }}"><span style="{{ hint }}">First</span></span><span><input type="text" placeholder="Last" style="{{ inp }}"><span style="{{ hint }}">Last</span></span></div></div>
+          <div></div>
+          <div><label style="{{ lbl }}">Phone Number</label><input type="tel" style="{{ inp }}"></div>
+          <div><label style="{{ lbl }}">Secondary Number</label><input type="tel" style="{{ inp }}"></div>
+        </div>
+      </div>
+
+      <div style="border:1px solid #EEF3F4; border-radius:16px; padding:22px 24px;">
+        <div style="font-size:15px; font-weight:800; color:#0F2E33; margin-bottom:16px;">Contact #3</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;">
+          <div><label style="{{ lbl }}">Name</label><div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;"><span><input type="text" placeholder="First" style="{{ inp }}"><span style="{{ hint }}">First</span></span><span><input type="text" placeholder="Last" style="{{ inp }}"><span style="{{ hint }}">Last</span></span></div></div>
+          <div></div>
+          <div><label style="{{ lbl }}">Phone Number</label><input type="tel" style="{{ inp }}"></div>
+          <div><label style="{{ lbl }}">Secondary Number</label><input type="tel" style="{{ inp }}"></div>
+        </div>
+      </div>
+
+      <!-- LOCKBOX -->
+      <h3 style="margin:36px 0 20px; font-size:19px; font-weight:800; color:#0F2E33;">Lock Box Details</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px 24px;">
+        <div><label style="{{ lbl }}">Choose a 4 digit lockbox code <span style="color:#C0392B;">*</span></label><input type="text" inputmode="numeric" maxlength="4" placeholder="e.g. 1234" style="{{ inp }}"></div>
+        <div><label style="{{ lbl }}">Where will the lockbox be located? <span style="color:#C0392B;">*</span></label><input type="text" placeholder="e.g. front door handle" style="{{ inp }}"></div>
+      </div>
+
+      <div style="margin-top:32px; border-top:1px solid #EEF3F4; padding-top:24px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:15px; font-weight:700; color:#0F2E33;">Total:</span><span style="font-size:26px; font-weight:800; color:#15768F;">{{ totalLabel }}</span></div>
+        <button onClick="{{ addToCart }}" style="display:flex; align-items:center; gap:12px; background:#0F2E33; color:#fff; font-family:inherit; font-size:17px; font-weight:700; padding:17px 34px; border:none; border-radius:999px; cursor:pointer; box-shadow:0 14px 32px -12px rgba(15,46,51,.5);">{{ cartLabel }}<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABBED DETAIL -->
+  <section style="max-width:1320px; margin:0 auto; padding:40px 40px 90px;">
+    <div style="display:flex; gap:8px; flex-wrap:wrap; border-bottom:1px solid #E5EEF0; margin-bottom:32px;">
+      <button onClick="{{ tab_o }}" style="{{ st_tab_o }}">Overview</button>
+      <button onClick="{{ tab_f }}" style="{{ st_tab_f }}">Features</button>
+      <button onClick="{{ tab_s }}" style="{{ st_tab_s }}">Specs &amp; Box</button>
+      <button onClick="{{ tab_r }}" style="{{ st_tab_r }}">Reviews</button>
+    </div>
+
+    <!-- OVERVIEW -->
+    <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+    <div style="display:grid; grid-template-columns:1.3fr 0.7fr; gap:40px; align-items:start;">
+      <div>
+        <p style="margin:0; font-size:17px; line-height:1.7; font-weight:500; color:#3D4F53;">The Mobile Alert Watch is a lightweight, easy-to-use On-the-Go device with Fall Detection alert, designed for individuals who live an active lifestyle and want protection wherever they go.</p>
+        <p style="margin:16px 0 0; font-size:17px; line-height:1.7; font-weight:500; color:#3D4F53;">Unlike traditional home-based systems, this watch-style medical alert device works both indoors and outdoors using advanced 4G LTE cellular, 3G, 2G technology. With built-in GPS and Wi-Fi location services, users can connect to the 24/7 Galaxy Medical Alert Response Centre from virtually anywhere. It offers instant, hands-free two-way communication, plus monitoring features such as heart rate (BPM), blood pressure, blood oxygen and step counting — all accessible through a simple touch interface.</p>
+
+        <h3 style="margin:32px 0 16px; font-size:20px; font-weight:800; color:#0F2E33;">Highlights</h3>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px 24px;">
+          <div style="display:flex; align-items:flex-start; gap:11px;"><span style="flex:none; margin-top:2px; width:22px; height:22px; border-radius:50%; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">Easy to use and ideal for an active lifestyle</span></div>
+          <div style="display:flex; align-items:flex-start; gap:11px;"><span style="flex:none; margin-top:2px; width:22px; height:22px; border-radius:50%; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">Attractive, lightweight help button worn on the wrist</span></div>
+          <div style="display:flex; align-items:flex-start; gap:11px;"><span style="flex:none; margin-top:2px; width:22px; height:22px; border-radius:50%; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">Instant hands-free communication</span></div>
+          <div style="display:flex; align-items:flex-start; gap:11px;"><span style="flex:none; margin-top:2px; width:22px; height:22px; border-radius:50%; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">4G LTE cellular technology</span></div>
+          <div style="display:flex; align-items:flex-start; gap:11px;"><span style="flex:none; margin-top:2px; width:22px; height:22px; border-radius:50%; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">Heart rate, blood pressure, oxygen, temperature &amp; steps</span></div>
+          <div style="display:flex; align-items:flex-start; gap:11px; grid-column:1 / -1;"><span style="flex:none; margin-top:2px; width:22px; height:22px; border-radius:50%; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">GPS + Wi-Fi location and 24/7 monitoring from virtually anywhere</span></div>
+        </div>
+      </div>
+
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:18px; padding:26px 28px;">
+        <h3 style="margin:0 0 16px; font-size:17px; font-weight:800; color:#0F2E33;">Every plan includes</h3>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:34px; height:34px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h10v8H3z"></path><path d="M13 9h4l4 3v3h-8z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg></span><span style="font-size:15.5px; font-weight:700; color:#23363A;">Free shipping</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:34px; height:34px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span><span style="font-size:15.5px; font-weight:700; color:#23363A;">Free lock box</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:34px; height:34px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4z"></path><path d="M8 10v10M16 10v10"></path></svg></span><span style="font-size:15.5px; font-weight:700; color:#23363A;">Free paramedic fridge magnet</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:34px; height:34px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></span><span style="font-size:15.5px; font-weight:700; color:#23363A;">Free equipment</span></div>
+        </div>
+        <div style="margin-top:18px; background:#EAF6FA; border-radius:12px; padding:14px 16px; font-size:14px; font-weight:700; color:#15768F; line-height:1.4;">★ Annual plans receive 2 months of service free.</div>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- FEATURES -->
+    <sc-if value="{{ isFeatures }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:16px; padding:26px 26px;"><span style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:12px; background:#EAF6FA;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4zM19 12a7 7 0 0 0-3-5.7"></path></svg></span><h3 style="margin:16px 0 6px; font-size:17px; font-weight:800; color:#0F2E33;">Two-Way Voice</h3><p style="margin:0; font-size:14.5px; line-height:1.55; font-weight:500; color:#5A6B6F;">Clear two-way voice with the Galaxy Response Centre, virtually anywhere.</p></div>
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:16px; padding:26px 26px;"><span style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:12px; background:#EAF6FA;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9-10a9 9 0 0 1 9-6 9 9 0 0 1 9 6c-2 5.5-9 10-9 10z"></path><path d="M9 11a3 3 0 0 1 6 0"></path></svg></span><h3 style="margin:16px 0 6px; font-size:17px; font-weight:800; color:#0F2E33;">Automatic Fall Detection</h3><p style="margin:0; font-size:14.5px; line-height:1.55; font-weight:500; color:#5A6B6F;">Detects a fall and sends an unconsciousness alarm if no movement after 10 seconds.</p></div>
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:16px; padding:26px 26px;"><span style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:12px; background:#EAF6FA;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 0 20M12 2a15 15 0 0 0 0 20M2 12h20"></path></svg></span><h3 style="margin:16px 0 6px; font-size:17px; font-weight:800; color:#0F2E33;">GPS &amp; Wi-Fi Location</h3><p style="margin:0; font-size:14.5px; line-height:1.55; font-weight:500; color:#5A6B6F;">Device tracking with GPS and Wi-Fi for fast, accurate location.</p></div>
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:16px; padding:26px 26px;"><span style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:12px; background:#EAF6FA;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v18H7zM11 6h2"></path></svg></span><h3 style="margin:16px 0 6px; font-size:17px; font-weight:800; color:#0F2E33;">Water-Resistant IP67</h3><p style="margin:0; font-size:14.5px; line-height:1.55; font-weight:500; color:#5A6B6F;">Wear it in the shower and while washing hands — do not submerge.</p></div>
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:16px; padding:26px 26px;"><span style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:12px; background:#EAF6FA;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"></path><circle cx="12" cy="12" r="9"></circle></svg></span><h3 style="margin:16px 0 6px; font-size:17px; font-weight:800; color:#0F2E33;">Health Sensors</h3><p style="margin:0; font-size:14.5px; line-height:1.55; font-weight:500; color:#5A6B6F;">Heart rate, step counting, temperature, stopwatch and more.</p></div>
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:16px; padding:26px 26px;"><span style="display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:12px; background:#EAF6FA;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="18" height="10" rx="2"></rect><path d="M22 10v4"></path></svg></span><h3 style="margin:16px 0 6px; font-size:17px; font-weight:800; color:#0F2E33;">Easy Recharging</h3><p style="margin:0; font-size:14.5px; line-height:1.55; font-weight:500; color:#5A6B6F;">USB charger, low-battery notification and level indicator; 4G/3G/2G cellular.</p></div>
+    </div>
+    </sc-if>
+
+    <!-- SPECS & BOX -->
+    <sc-if value="{{ isSpecs }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start;">
+
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:20px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:220px; background:#F7FAFB; border-bottom:1px solid #EEF3F4; display:flex; align-items:center; justify-content:center; padding:24px;"><img src="./assets/images/watch-front.webp" alt="Mobile Watch System" style="max-width:100%; max-height:100%; object-fit:contain;"></div>
+        <div style="padding:24px 26px;">
+          <div style="font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#2E9CB0;">Device</div>
+          <h4 style="margin:6px 0 16px; font-size:18px; font-weight:800; color:#0F2E33;">Mobile Watch System</h4>
+          <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-top:1px solid #EEF3F4;"><span style="font-size:14px; font-weight:600; color:#6B7E82;">Size</span><span style="font-size:14px; font-weight:700; color:#0F2E33; text-align:right;">49.1 × 41 × 14.1 mm</span></div>
+            <div style="display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-top:1px solid #EEF3F4;"><span style="font-size:14px; font-weight:600; color:#6B7E82;">Weight</span><span style="font-size:14px; font-weight:700; color:#0F2E33; text-align:right;">50.60 g (1.78 oz)</span></div>
+            <div style="display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-top:1px solid #EEF3F4;"><span style="font-size:14px; font-weight:600; color:#6B7E82;">Connectivity</span><span style="font-size:14px; font-weight:700; color:#0F2E33; text-align:right;">4G / 3G / 2G cellular</span></div>
+            <div style="display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-top:1px solid #EEF3F4;"><span style="font-size:14px; font-weight:600; color:#6B7E82;">Water resistance</span><span style="font-size:14px; font-weight:700; color:#0F2E33; text-align:right;">IP67</span></div>
+            <div style="display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-top:1px solid #EEF3F4;"><span style="font-size:14px; font-weight:600; color:#6B7E82;">Charging</span><span style="font-size:14px; font-weight:700; color:#0F2E33; text-align:right;">USB charger</span></div>
+            <div style="display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-top:1px solid #EEF3F4;"><span style="font-size:14px; font-weight:600; color:#6B7E82;">Screen</span><span style="font-size:14px; font-weight:700; color:#0F2E33; text-align:right;">Full colour</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff; border:1px solid #E5EEF0; border-radius:20px; padding:26px 28px;">
+        <h3 style="margin:0 0 16px; font-size:18px; font-weight:800; color:#0F2E33;">What's in the box</h3>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15px; font-weight:600; color:#23363A;">Medical Alert Smart Watch unit</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15px; font-weight:600; color:#23363A;">USB charging cable</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15px; font-weight:600; color:#23363A;">Lockbox — code pre-setup and programmed</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15px; font-weight:600; color:#23363A;">Paramedic fridge magnet</span></div>
+          <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15px; font-weight:600; color:#23363A;">Installation guide</span></div>
+        </div>
+        <a href="#" style="margin-top:22px; display:inline-flex; align-items:center; gap:10px; background:#2E9CB0; color:#fff; font-size:15px; font-weight:700; padding:13px 22px; border-radius:999px; text-decoration:none;">Download the Installation Guide<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"></path></svg></a>
+      </div>
+
+    </div>
+    </sc-if>
+    <sc-if value="{{ isReviews }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:760px; margin:0 auto; background:#fff; border:1px solid #E5EEF0; border-radius:20px; padding:44px 40px; text-align:center;">
+      <div style="display:flex; gap:4px; justify-content:center; margin-bottom:18px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#2E9CB0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg></div>
+      <p style="margin:0; font-size:22px; line-height:1.5; font-weight:500; color:#33474B;">"I rented the Galaxy system after fainting in my home. It was fortunate that I fell close to a phone. The system has given me confidence to move around my area."</p>
+      <div style="margin-top:20px; font-size:17px; font-weight:800; color:#0F2E33;">Lynn Craig</div>
+    </div>
+    </sc-if>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#FAFCFD; border-top:1px solid #EDF3F4;">
+    <div style="max-width:1320px; margin:0 auto; padding:80px 40px 40px; display:grid; grid-template-columns:1.1fr 1fr 1fr 1.1fr; gap:48px;">
+      <div>
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:46px; width:auto; display:block;">
+        <div style="margin-top:26px; display:flex; gap:12px;">
+          <a href="#" aria-label="Facebook" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"></path></svg></a>
+          <a href="#" aria-label="X" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18.2 2H21l-6.4 7.3L22 22h-6.3l-4.9-6.4L5.2 22H2.4l6.9-7.9L2 2h6.4l4.4 5.8L18.2 2zm-1.1 18h1.6L7 3.7H5.3L17.1 20z"></path></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Additional Info</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./do-i-need-one.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Do I Need A Medical Alert System?</a>
+          <a href="./in-the-home.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">In the Home</a>
+          <a href="./on-the-go.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">On the Go</a>
+          <a href="./alert-kits.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Alert Kits</a>
+          <a href="./blog.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Policies and Procedures</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./terms.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Terms &amp; Conditions</a>
+          <a href="./shipping.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Shipping &amp; Returns Policy</a>
+          <a href="./monitoring.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Monitoring Services</a>
+          <a href="./privacy.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Privacy Policy</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Contact Information</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <p style="margin:0; font-size:16px; line-height:1.5; font-weight:500; color:#5A6B6F;">Galaxy Medical Alert Systems<br>361 Joffre Place, Windsor, ON N8X 2T1</p>
+          <a href="tel:18559057414" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">1-855-905-7414</a>
+          <a href="mailto:info@galaxymedicalalert.com" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">info@galaxymedicalalert.com</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #EDF3F4;">
+      <div style="max-width:1320px; margin:0 auto; padding:26px 40px; text-align:center; font-size:14.5px; font-weight:500; color:#8A999C;">Copyright © Galaxy Medical Alert Systems.</div>
+    </div>
+  </footer>
+
+</div>
+  <dc-import name="support-chatbot" hint-size="0px,0px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    bill: 'monthly', wear: 'pendant', tier: 'standard', addl: 0,
+    spb: 0, mfs: 0, dve: 0, wve: 0,
+    gallery: 0, tab: 'overview', addonsOpen: false, added: false,
+  };
+  set(k, v) { return () => this.setState({ [k]: v, added: false }); }
+  step(k, d) { return () => this.setState((s) => ({ [k]: Math.max(0, s[k] + d), added: false })); }
+  componentDidMount() {
+    try {
+      const p = new URLSearchParams(window.location.search);
+      if (p.get('tier') === 'fall') this.setState({ tier: 'fall', wear: 'pendant' });
+    } catch (e) {}
+  }
+
+  renderVals() {
+    const s = this.state;
+    const money = (n) => '$' + n.toFixed(2);
+    const factor = s.bill === 'monthly' ? 1 : s.bill === 'quarterly' ? 3 : 12;
+    const basePrice = 49.95 * factor;
+    const period = s.bill === 'monthly' ? '/ month' : s.bill === 'quarterly' ? '/ quarter' : '/ year';
+    const ttl = s.ttl === 'yes';
+    const ttlAdd = ttl ? (s.bill === 'monthly' ? 5 : s.bill === 'quarterly' ? 15 : 50) : 0;
+    let total = basePrice + ttlAdd;
+    const colour = s.colour || 'black';
+
+    // gallery
+    const imgs = ['./assets/images/product-home.png','./assets/images/gallery-console.webp','./assets/images/gallery-watch-dim.webp','./assets/images/gallery-pendant-dim.webp','./assets/images/gallery-watch-loonie.webp','./assets/images/gallery-pendant-loonie.webp'];
+    const gi = s.gallery || 0;
+    const thumbBase = { appearance:'none', border:'1.5px solid #E0EAED', background:'#fff', cursor:'pointer', padding:'4px', borderRadius:'10px', aspectRatio:'1/1', overflow:'hidden' };
+    const thumbOn = { ...thumbBase, border:'2px solid #2E9CB0' };
+    const imgsMain = ['./assets/images/watch-front.webp','./assets/images/watch-back.webp','./assets/images/watch-lifestyle.webp','./assets/images/watch-dimensions.webp'];
+
+    const seg = { appearance:'none', border:'1.5px solid #DDE7EA', background:'#fff', cursor:'pointer', fontFamily:'inherit', fontSize:'15px', fontWeight:700, color:'#46585C', padding:'13px 10px', borderRadius:'12px', textAlign:'center' };
+    const segOn = { ...seg, background:'#2E9CB0', color:'#fff', border:'1.5px solid #2E9CB0' };
+    const choice = { appearance:'none', border:'1.5px solid #DDE7EA', background:'#fff', cursor:'pointer', fontFamily:'inherit', color:'#46585C', padding:'13px 14px', borderRadius:'12px', textAlign:'left' };
+    const choiceOn = { ...choice, border:'2px solid #2E9CB0', background:'#F4FBFC', color:'#0F2E33' };
+    const radioOff = { flex:'none', width:'16px', height:'16px', borderRadius:'50%', border:'2px solid #C6D2D5', display:'inline-block' };
+    const radioOn = { flex:'none', width:'16px', height:'16px', borderRadius:'50%', border:'5px solid #2E9CB0', display:'inline-block' };
+    const swatch = { appearance:'none', border:'2px solid #DDE7EA', background:'#fff', cursor:'pointer', padding:'6px', borderRadius:'12px', flex:'1' };
+    const swatchOn = { ...swatch, border:'2px solid #2E9CB0' };
+
+    const tabBase = { appearance:'none', border:'none', background:'transparent', cursor:'pointer', fontFamily:'inherit', fontSize:'16px', fontWeight:700, color:'#8A999C', padding:'14px 20px', borderBottom:'3px solid transparent', marginBottom:'-1px' };
+    const tabOn = { ...tabBase, color:'#0F2E33', borderBottom:'3px solid #2E9CB0' };
+
+    const inp = 'width:100%; border:1.5px solid #DDE7EA; border-radius:11px; padding:12px 14px; font-family:inherit; font-size:15px; font-weight:500; color:#0F2E33; background:#fff; outline:none;';
+    const lbl = 'display:block; font-size:14px; font-weight:700; color:#0F2E33; margin-bottom:7px;';
+    const hint = 'display:block; margin-top:5px; font-size:12px; font-weight:500; color:#9AA9AC;';
+
+    const out = {
+      inp, lbl, hint,
+      mainImg: imgsMain[gi],
+      priceLabel: money(basePrice), period,
+      isYearly: s.bill === 'yearly',
+      st_bill_m: s.bill==='monthly'?segOn:seg, st_bill_q: s.bill==='quarterly'?segOn:seg, st_bill_y: s.bill==='yearly'?segOn:seg,
+      bill_m: this.set('bill','monthly'), bill_q: this.set('bill','quarterly'), bill_y: this.set('bill','yearly'),
+      st_ttl_no: !ttl?choiceOn:choice, st_ttl_yes: ttl?choiceOn:choice,
+      radio_ttl_no: !ttl?radioOn:radioOff, radio_ttl_yes: ttl?radioOn:radioOff,
+      ttl_no: this.set('ttl','no'), ttl_yes: this.set('ttl','yes'),
+      st_col_black: colour==='black'?swatchOn:swatch, st_col_red: colour==='red'?swatchOn:swatch,
+      col_black: this.set('colour','black'), col_red: this.set('colour','red'),
+      colourLabel: colour==='black' ? 'Black selected' : 'Red selected',
+      totalLabel: money(total) + ' ' + period,
+      cartLabel: s.added ? 'Added to cart ✓' : 'Add To Cart',
+      addToCart: () => this.setState({ added: true }),
+      st_tab_o: s.tab==='overview'?tabOn:tabBase, st_tab_f: s.tab==='features'?tabOn:tabBase, st_tab_s: s.tab==='specs'?tabOn:tabBase, st_tab_r: s.tab==='reviews'?tabOn:tabBase,
+      tab_o: this.set('tab','overview'), tab_f: this.set('tab','features'), tab_s: this.set('tab','specs'), tab_r: this.set('tab','reviews'),
+      isOverview: s.tab==='overview', isFeatures: s.tab==='features', isSpecs: s.tab==='specs', isReviews: s.tab==='reviews',
+    };
+    for (let i=0;i<4;i++){ out['img'+i] = () => this.setState({ gallery: i }); out['thumb'+i] = gi===i?thumbOn:thumbBase; }
+    return out;
+  }
+}
+</script>
+</body>
+</html>

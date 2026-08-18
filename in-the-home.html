@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./assets/js/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#fff; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:#2E9CB0; }
+  a:hover{ color:#1F7E96; }
+
+  .shop-dd{ position:relative; display:inline-flex; align-items:center; }
+  .shop-menu{ position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:16px; opacity:0; visibility:hidden; transition:opacity .15s ease; z-index:60; }
+  .shop-dd:hover .shop-menu{ opacity:1; visibility:visible; }
+  .shop-chev{ transition:transform .2s ease; }
+  .shop-dd:hover .shop-chev{ transform:rotate(180deg); }
+  .shop-item:hover{ background:#F4F9FB; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; width:100%; background:#fff;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(10px); border-bottom:1px solid #E8EFF1;">
+    <div style="max-width:1320px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px;">
+      <a href="./index.html" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:48px; width:auto; display:block;">
+      </a>
+      <nav style="display:flex; align-items:center; gap:38px;">
+        <a href="./index.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Home</a>
+        <a href="./about.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">About</a>
+        <div class="shop-dd">
+          <a href="./in-the-home.html" style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Shop
+            <svg class="shop-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="shop-menu">
+            <div style="min-width:270px; background:#fff; border:1px solid #E8EFF1; border-radius:16px; box-shadow:0 24px 50px -20px rgba(15,46,51,.35); padding:10px; display:flex; flex-direction:column;">
+              <a href="./in-the-home.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">At-Home System</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">In-home base unit</span></span>
+              </a>
+              <a href="./on-the-go.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0"></path><circle cx="12" cy="19" r="1.3" fill="#2E9CB0" stroke="none"></circle></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">On-the-Go GPS</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Mobile watch &amp; pendant</span></span>
+              </a>
+              <a href="./alert-kits.html" class="shop-item" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:11px; text-decoration:none;">
+                <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#EAF6FA; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9CB0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"></path><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"></path></svg></span>
+                <span><span style="display:block; font-size:15px; font-weight:700; color:#0F2E33;">Alert Kits</span><span style="display:block; font-size:12.5px; font-weight:500; color:#8A999C;">Essential, Plus &amp; Premier</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="./contact.html" style="font-size:16px; font-weight:500; color:#54686D; text-decoration:none;">Contact</a>
+      </nav>
+      <a href="#systems" style="display:flex; align-items:center; gap:9px; background:#2E9CB0; color:#fff; font-size:15.5px; font-weight:700; padding:13px 22px; border-radius:999px; text-decoration:none; box-shadow:0 6px 16px rgba(46,156,176,.28);">
+        Get Started Now
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="background:linear-gradient(180deg,#F1F8FB 0%,#FFFFFF 100%);">
+    <div style="max-width:1000px; margin:0 auto; padding:80px 40px 20px; text-align:center;">
+      <span style="display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#2E9CB0; background:#EAF6FA; border-radius:999px; padding:7px 15px;">In the Home</span>
+      <h1 style="margin:20px auto 0; max-width:760px; font-size:56px; line-height:1.04; font-weight:800; letter-spacing:-.024em; color:#0F2E33; text-wrap:pretty;">Safe at home, even when you're not there.</h1>
+      <p style="margin:22px auto 0; max-width:600px; font-size:19px; line-height:1.55; font-weight:500; color:#48595D;">Cellular-based home medical alert systems for aging parents who spend most of their time at home — no landline required, help is one press away, backed by CSAA Five Diamond certified monitoring across Canada.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS (2 only) -->
+  <section id="systems" style="background:#fff;">
+    <div style="max-width:1160px; margin:0 auto; padding:56px 40px 90px;">
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:32px; align-items:start;">
+
+        <!-- Home Cellular System -->
+        <div style="background:#fff; border:1px solid #E5EEF0; border-radius:24px; overflow:hidden; box-shadow:0 18px 44px -28px rgba(15,46,51,.32); display:flex; flex-direction:column;">
+          <div style="position:relative; background:#fff; aspect-ratio:4/3; overflow:hidden; border-bottom:1px solid #EEF3F4;">
+            <img src="./assets/images/product-home.png" alt="Home Cellular System with base unit, pendant and wristband" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="padding:34px 34px 36px; flex:1; display:flex; flex-direction:column;">
+            <h2 style="margin:0; font-size:28px; font-weight:800; letter-spacing:-.015em; color:#0F2E33;">Home Cellular System</h2>
+            <p style="margin:14px 0 0; font-size:16px; line-height:1.6; font-weight:500; color:#5A6B6F;">Whole-home protection over 4G/LTE cellular — no landline, no Wi-Fi needed. Includes the base unit plus a wearable pendant and wristband.</p>
+            <div style="margin-top:22px; display:flex; flex-direction:column; gap:12px;">
+              <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">4G/LTE cellular connection</span></div>
+              <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">2-way speaker on the base unit</span></div>
+              <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">Easy self-install in under 5 minutes</span></div>
+            </div>
+            <div style="margin-top:auto; padding-top:26px;">
+              <div style="display:flex; align-items:baseline; gap:6px;"><span style="font-size:13px; font-weight:600; color:#8A999C;">From</span><span style="font-size:34px; font-weight:800; letter-spacing:-.02em; color:#0F2E33;">$34.95</span><span style="font-size:15px; font-weight:600; color:#8A999C;">/ month</span></div>
+              <a href="./home-cellular-system.html" style="margin-top:20px; display:flex; align-items:center; justify-content:center; gap:12px; background:#0F2E33; color:#fff; font-size:16.5px; font-weight:700; padding:16px 28px; border-radius:999px; text-decoration:none; box-shadow:0 12px 28px -12px rgba(15,46,51,.45);">Shop Home Cellular System<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Cellular System with Fall Detection -->
+        <div style="background:#fff; border:2px solid #2E9CB0; border-radius:24px; overflow:hidden; box-shadow:0 24px 50px -26px rgba(46,156,176,.42); display:flex; flex-direction:column; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; z-index:2; background:#2E9CB0; color:#fff; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:6px 14px; border-radius:999px;">Most Protection</span>
+          <div style="position:relative; background:#fff; aspect-ratio:4/3; overflow:hidden; border-bottom:1px solid #EEF3F4;">
+            <img src="./assets/images/product-home-fall.png" alt="Home Cellular System with Fall Detection base unit and pendant" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="padding:34px 34px 36px; flex:1; display:flex; flex-direction:column;">
+            <h2 style="margin:0; font-size:28px; font-weight:800; letter-spacing:-.015em; color:#0F2E33;">Home Cellular System with Fall Detection</h2>
+            <p style="margin:14px 0 0; font-size:16px; line-height:1.6; font-weight:500; color:#5A6B6F;">Everything in the Home Cellular System, plus automatic fall detection — help is triggered even if your parent can't press the button.</p>
+            <div style="margin-top:22px; display:flex; flex-direction:column; gap:12px;">
+              <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">Automatic fall detection</span></div>
+              <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">4G/LTE cellular connection</span></div>
+              <div style="display:flex; align-items:center; gap:11px;"><span style="flex:none; width:22px; height:22px; border-radius:50%; background:#E2F3E9; display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2FA36B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:15.5px; font-weight:600; color:#23363A;">2-way speaker on the base unit</span></div>
+            </div>
+            <div style="margin-top:auto; padding-top:26px;">
+              <div style="display:flex; align-items:baseline; gap:6px;"><span style="font-size:13px; font-weight:600; color:#8A999C;">From</span><span style="font-size:34px; font-weight:800; letter-spacing:-.02em; color:#0F2E33;">$44.95</span><span style="font-size:15px; font-weight:600; color:#8A999C;">/ month</span></div>
+              <a href="./home-cellular-system.html?tier=fall" style="margin-top:20px; display:flex; align-items:center; justify-content:center; gap:12px; background:#2E9CB0; color:#fff; font-size:16.5px; font-weight:700; padding:16px 28px; border-radius:999px; text-decoration:none; box-shadow:0 12px 28px -12px rgba(46,156,176,.5);">Shop with Fall Detection<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="margin:36px auto 0; max-width:640px; text-align:center; font-size:15.5px; line-height:1.6; font-weight:500; color:#8A999C;">Not sure which is right? <a href="./do-i-need-one.html" style="font-weight:700;">Take our quick assessment</a> or call us at <a href="tel:18559057414" style="font-weight:700;">1-855-905-7414</a>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#FAFCFD; border-top:1px solid #EDF3F4;">
+    <div style="max-width:1320px; margin:0 auto; padding:80px 40px 40px; display:grid; grid-template-columns:1.1fr 1fr 1fr 1.1fr; gap:48px;">
+      <div>
+        <img src="./assets/images/GalaxyMAS-Logo-RGB.png" alt="Galaxy Medical Alert Systems" style="height:46px; width:auto; display:block;">
+        <div style="margin-top:26px; display:flex; gap:12px;">
+          <a href="#" aria-label="Facebook" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"></path></svg></a>
+          <a href="#" aria-label="X" style="width:42px; height:42px; border-radius:50%; background:#0F2E33; display:flex; align-items:center; justify-content:center; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18.2 2H21l-6.4 7.3L22 22h-6.3l-4.9-6.4L5.2 22H2.4l6.9-7.9L2 2h6.4l4.4 5.8L18.2 2zm-1.1 18h1.6L7 3.7H5.3L17.1 20z"></path></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Additional Info</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./do-i-need-one.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Do I Need A Medical Alert System?</a>
+          <a href="./in-the-home.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">In the Home</a>
+          <a href="./on-the-go.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">On the Go</a>
+          <a href="./alert-kits.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Alert Kits</a>
+          <a href="./blog.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Policies and Procedures</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <a href="./terms.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Terms &amp; Conditions</a>
+          <a href="./shipping.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Shipping &amp; Returns Policy</a>
+          <a href="./monitoring.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Monitoring Services</a>
+          <a href="./privacy.html" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">Privacy Policy</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 22px; font-size:21px; font-weight:800; color:#0F2E33;">Contact Information</h4>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <p style="margin:0; font-size:16px; line-height:1.5; font-weight:500; color:#5A6B6F;">Galaxy Medical Alert Systems<br>361 Joffre Place, Windsor, ON N8X 2T1</p>
+          <a href="tel:18559057414" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">1-855-905-7414</a>
+          <a href="mailto:info@galaxymedicalalert.com" style="font-size:16px; font-weight:500; color:#5A6B6F; text-decoration:none;">info@galaxymedicalalert.com</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #EDF3F4;">
+      <div style="max-width:1320px; margin:0 auto; padding:26px 40px; text-align:center; font-size:14.5px; font-weight:500; color:#8A999C;">Copyright © Galaxy Medical Alert Systems.</div>
+    </div>
+  </footer>
+
+</div>
+  <dc-import name="support-chatbot" hint-size="0px,0px"></dc-import>
+</x-dc>
+</body>
+</html>

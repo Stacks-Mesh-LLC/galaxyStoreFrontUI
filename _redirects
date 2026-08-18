@@ -1,0 +1,27 @@
+# Cloudflare Pages Redirects Configuration
+
+# Legacy .dc.html URLs to clean .html URLs
+/Galaxy%20Hero.dc.html           / 301
+/Galaxy%20Hero.dc                / 301
+/About.dc.html                   /about.html 301
+/Alert%20Kits.dc.html            /alert-kits.html 301
+/Blog%20-%20Alberta.dc.html      /blog-alberta.html 301
+/Blog%20-%20Apple%20Watch.dc.html /blog-apple-watch.html 301
+/Blog%20-%20Winter%20Falls.dc.html /blog-winter-falls.html 301
+/Blog.dc.html                    /blog.html 301
+/Contact.dc.html                 /contact.html 301
+/Do%20I%20Need%20One.dc.html     /do-i-need-one.html 301
+/Essential%20Kit.dc.html         /essential-kit.html 301
+/Essential%20Plus%20Kit.dc.html  /essential-plus-kit.html 301
+/Home%20Cellular%20System.dc.html /home-cellular-system.html 301
+/In%20the%20Home.dc.html         /in-the-home.html 301
+/Mobile%20Slimline%20Watch%20System.dc.html /mobile-slimline-watch-system.html 301
+/Mobile%20System%20GPS%20Fall%20WiFi.dc.html /mobile-system-gps-fall-wifi.html 301
+/Mobile%20System%20GPS%20Fall.dc.html /mobile-system-gps-fall.html 301
+/Mobile%20Watch%20System.dc.html /mobile-watch-system.html 301
+/Monitoring.dc.html              /monitoring.html 301
+/On-the-Go.dc.html               /on-the-go.html 301
+/Premier%20Kit.dc.html           /premier-kit.html 301
+/Privacy.dc.html                 /privacy.html 301
+/Shipping.dc.html                /shipping.html 301
+/Terms.dc.html                   /terms.html 301
